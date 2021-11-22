@@ -3,15 +3,24 @@
 ## Setup
 
 Basic overview of the installation steps.
+
 We have the choice of using Anaconda in native Win 11 or in Ubuntu 20.04 if using the Windows Subsystem for Linux
+
 (Optional) Install WSL2.
-[a link](https://docs.nvidia.com/cuda/wsl-user-guide/index.html)
+[WSL2](https://docs.nvidia.com/cuda/wsl-user-guide/index.html)
+
 Install Anaconda (Download for Linux on WSL2 or Windows for Win11)
-[a link](https://www.anaconda.com/)
+[Anaconda](https://www.anaconda.com/)
+
 Create a new conda environment
-    conda create --name curator python=3.9
+```
+conda create --name curator python=3.9
+```
+
 Activate the new environment
-	conda activate curator
+```
+conda activate curator
+```
 
 This has been tested on Python 3.9.7
 
