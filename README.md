@@ -6,11 +6,9 @@ Basic overview of the installation steps.
 
 We have the choice of using Anaconda in native Win 11 or in Ubuntu 20.04 if using the Windows Subsystem for Linux
 
-(Optional) Install WSL2.
-[WSL2](https://docs.nvidia.com/cuda/wsl-user-guide/index.html)
+(Optional) Install [WSL2](https://docs.nvidia.com/cuda/wsl-user-guide/index.html)
 
-Install Anaconda (Download for Linux on WSL2 or Windows for Win11)
-[Anaconda](https://www.anaconda.com/)
+Install [Anaconda](https://www.anaconda.com/) (Download for Linux on WSL2 or Windows for Win11)
 
 Create a new conda environment
 ```
@@ -26,10 +24,10 @@ This has been tested on Python 3.9.7
 
 Make sure the following package versions are installed (via pip):
 ```
-```
-
-Install the following additional packages via apt on Ubuntu 20.04
-```
+dicom2nifti>=2.3.0
+pydicom>=2.2.2
+tqdm>=4.62.3
+pandas>=1.3.4
 ```
 
 ## Additional CUDA setup notes
@@ -40,12 +38,38 @@ Install the following additional packages via apt on Ubuntu 20.04
 ## Usage
 
 ```
-python curator.py [-h] input_dir output_dir --csv_file --log_file
+python curator.py [-h] mode
+
+python curator.py parse --input_dir /dcmdirectory/ --output_dir /outdcmdirectory/ --csv_file csv_file.csv
+
+python curator.py nifti --csv_file csv_file.csv --output_dir /outdcmdirectory/
+
 ```
 
 ## Arguments
 
-* `input_dir`: folder containing dicom images to be curated (will search all subdirectories of this folder).
-* `output_dir': folder to place all the sorted dicom images by accession and series
-* `csv_file`: csv file containing a summary of all studies and series. Each series is a row.
-* 'log_file': Log file where results will be stored
+* `mode`: curator mode: ['parse','nifti','train','inference']
+* `--input_dir`: folder containing dicom images to be curated (will search all subdirectories of this folder).
+* `--output_dir`: folder to place all the sorted dicom images by accession and series
+* `--csv_file`: csv file containing a summary of all studies and series. Each series is a row.
+* `--log_file`: Log file where results will be stored
+
+# Additional usage details 
+
+* mode = "parse"
+* Read a folder containing unlabeled dicom images. sort and copy the files, and generate a csv file summarizing all the valid series for labeling.
+* Mandatory arguments: --input_dir, --output_dir, --csv_file
+
+* mode = "nifti"
+* Read a csv file containing columns "dcmdir" and "label". Images in dcmdir will be converted to nifti, one nifti per row.
+* Hint: Run parse to generate a csv file with dcmdir, add labels (contrast, 
+* Mandatory arguments: --csv_file, --output_dir
+
+* mode = "train"
+* Train a NN to label imaging data
+* Mandatory arguments: --input_dir, --csv_file
+
+* mode = "inference"
+* Given a trained NN, make new inferences on unseen data
+* Mandartory arguments: --csv_file
+

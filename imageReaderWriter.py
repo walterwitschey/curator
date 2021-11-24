@@ -186,7 +186,7 @@ class imageReaderWriter():
                 logger.error("Not a valid series description in file: %s",filename)
             try:
                 tag = "SeriesNumber"
-                newSeries.seriesNumber=str(meta.data_element(tag).value)
+                newSeries.seriesNumber=str(meta.data_element(tag).value+10000)
             except:
                 logger.error("Not a valid series number in file: %s",filename)
             newSeries.accessionNumber=str(accessionNumber)
