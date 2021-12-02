@@ -75,5 +75,5 @@ if __name__ == "__main__":
         ne=niftiEngine.niftiEngine("NiftiEngine")
 
         # Given a csv file with 
-        ne.writeCSVToNifti(args.csv_file)
+        ne.writeCSVToNifti(args.csv_file,args.output_dir)
         sys.exit()
