@@ -64,7 +64,7 @@ class imageReaderWriter():
 
         return ["NONE"]
         
-    def copyValidSeriesAndUpdateStudyList(self,copy_dir,use_acccession_as_filename=False):
+    def copyValidSeriesAndUpdateStudyList(self,copy_dir,use_acccession_as_filename=False,copy_all_series=True):
         logger.info("FileReader.copyValidSeriesAndUpdateStudyList()")
         logger.info("    Copying valid series to %s",copy_dir)
         if not os.path.exists(copy_dir):
@@ -72,7 +72,7 @@ class imageReaderWriter():
         # pass through the study list, copy valid files, and update path
         for studyIndex, study in enumerate(self.studyList[:]):
             for seriesIndex, series in enumerate(study.seriesList[:]):
-                if(series.isValidSeries):
+                if(series.isValidSeries or copy_all_series):
                     if(use_acccession_as_filename):
                         studyDirectory=os.path.join(copy_dir,study.accessionNumber)
                     else:
