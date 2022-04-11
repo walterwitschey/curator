@@ -25,15 +25,20 @@ class niftiEngine():
         df=pd.read_csv(csv_file)
         
         # error checking
-        if not set(["contrast","orientation","dcmDirectory"]).issubset(df.columns):
-            logger.error("niftiEngine could not find columns contrast, orientation, dcmdir in csv file")
+        if not set(["dcmDirectory","patientName","accessionNumber","acquisitionNumber","seriesNumber","seriesDescription"]).issubset(df.columns):
+            logger.error("niftiEngine could not find column dcmdir in csv file")
             return
             
         for index, row in df.iterrows():
             dcmDirectory = row["dcmDirectory"]
-            contrast = row["contrast"]
-            orientation = row["orientation"]
-            self.process_dcm(dcmDirectory,output_dir,contrast)
+            seriesNumber = row["seriesNumber"]
+            seriesDescription = row["seriesDescription"]
+            accessionNumber = row["accessionNumber"]
+            patientName = row["patientName"]
+            #contrast = row["contrast"]
+            #orientation = row["orientation"]
+            nii_output_dir=os.path.join(output_dir,patientName)
+            self.process_dcm(dcmDirectory,nii_output_dir)
             
     def process_dcm(self, input_dir, output_dir,
                 exclude_tags=[], inject_tags={}, write_slice_jsons=False):
@@ -48,10 +53,10 @@ class niftiEngine():
         #   os.remove(output_dir)
         logging.info('      dcm2niix()')
         #try:
-        os.path.join(output_dir,contrast)
-        with open(os.path.join(output_structure, log_file), 'w') as f_log:
+        #os.path.join(output_dir,contrast)
+        with open(os.path.join(output_dir, log_file), 'w') as f_log:
             result = subprocess.run(
-                ['dcm2niix', '-f', '%s_%d', '-m', 'n', '-o', output_dir, input_dir],
+                ['dcm2niix', '-f', '%s_%d_%j', '-m', 'y', '-o', output_dir, input_dir],
                 stdout=f_log, stderr=subprocess.STDOUT, universal_newlines=True)
         #except:
         #    logging.exception("Exception occurred")
