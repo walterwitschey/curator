@@ -64,7 +64,7 @@ class imageReaderWriter():
 
         return ["NONE"]
         
-    def copyValidSeriesAndUpdateStudyList(self,copy_dir,use_acccession_as_filename=False,copy_all_series=True):
+    def copyValidSeriesAndUpdateStudyList(self,copy_dir,use_accession_as_filename=False,copy_all_series=True):
         logger.info("FileReader.copyValidSeriesAndUpdateStudyList()")
         logger.info("    Copying valid series to %s",copy_dir)
         if not os.path.exists(copy_dir):
@@ -73,7 +73,7 @@ class imageReaderWriter():
         for studyIndex, study in enumerate(self.studyList[:]):
             for seriesIndex, series in enumerate(study.seriesList[:]):
                 if(series.isValidSeries or copy_all_series):
-                    if(use_acccession_as_filename):
+                    if(use_accession_as_filename):
                         studyDirectory=os.path.join(copy_dir,study.accessionNumber)
                     else:
                         studyDirectory=os.path.join(copy_dir,study.patientName)
@@ -83,7 +83,7 @@ class imageReaderWriter():
                     if not os.path.exists(seriesDirectory):
                         os.makedirs(seriesDirectory,exist_ok=True)
                     for imageIndex, image in enumerate(series.imageList[:]):
-                        new_filename = os.path.join(seriesDirectory,image.SOPInstanceUID+'.dcm')
+                        new_filename = os.path.join(seriesDirectory,str(image.acquisitionNumber)+"_"+image.SOPInstanceUID+'.dcm')
                         shutil.copyfile(image.filename,new_filename)
         self.studyList = []
         self.studyList=self.queryDirectory(copy_dir,level=2)
@@ -131,15 +131,16 @@ class imageReaderWriter():
             logger.error("Invalid SOPInstanceUID in file: " + filename + "\n")
             return
         try:
+            tag = "AcquisitionNumber"
+            acquisitionNumber = meta.data_element(tag).value
+        except:
+            acquisitionNumber=None
+            logger.error("Invalid acquisitionNumber in file: " + filename + "\n")
+        try:
             tag = "AccessionNumber"
             accessionNumber = meta.data_element(tag).value
         except:
             logger.error("Invalid accessionNumber in file: " + filename + "\n")
-            return
-        try:
-            tag = "AcquisitionNumber"
-            acquisitionNumber = meta.data_element(tag).value
-        except:
             return
         try:
             tag = "PatientName"
@@ -201,6 +202,7 @@ class imageReaderWriter():
 
         # add the file to the file list for that series
         newimage = Image(SOPInstanceUID)
+        newimage.acquisitionNumber = acquisitionNumber
         newimage.filename = filename
         self.studyList[studyIndex].seriesList[seriesIndex].imageList.append(newimage)
 

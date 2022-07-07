@@ -55,7 +55,7 @@ if __name__ == "__main__":
         
         # Copy valid series to the new directory and sort
         output_dcmdir=os.path.join(args.output_dir,"dcm")
-        studyList=reader.copyValidSeriesAndUpdateStudyList(output_dcmdir)
+        studyList=reader.copyValidSeriesAndUpdateStudyList(output_dcmdir,True)
 
         # writeStudyListToCSV
         reader.writeStudyListToCSV(args.csv_file)

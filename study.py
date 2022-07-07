@@ -84,7 +84,7 @@ class Series():
         
 class Image():
     def __init__(self,SOPInstanceUID):
-        self.imagenumber = None
+        self.acquisitionNumber = None
         self.filename = None
         self.scantype = None
         self.SOPInstanceUID = SOPInstanceUID
