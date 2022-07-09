@@ -70,7 +70,7 @@ class imageReaderWriter():
         if not os.path.exists(copy_dir):
             os.makedirs(copy_dir,exist_ok=True)
         # pass through the study list, copy valid files, and update path
-        for studyIndex, study in enumerate(self.studyList[:]):
+        for studyIndex, study in tqdm(enumerate(self.studyList[:])):
             for seriesIndex, series in enumerate(study.seriesList[:]):
                 if(series.isValidSeries or copy_all_series):
                     if(use_accession_as_filename):

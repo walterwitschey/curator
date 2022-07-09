@@ -32,6 +32,7 @@ if __name__ == "__main__":
     parser.add_argument("--input_dir", type=str, help="Input directory with dicom images to be curated")
     parser.add_argument("--output_dir",type=str,help="Output directory with curated files")
     parser.add_argument("--csv_file",type=str,help="csv file with data to curate")
+    parser.add_argument("--accession_as_folder",type=str,help="use accession number as folder name",default=True)
     parser.add_argument("--log_file",type=str,help="txt file with log info",default="curator_log.txt")
     args = parser.parse_args()
     
@@ -55,7 +56,7 @@ if __name__ == "__main__":
         
         # Copy valid series to the new directory and sort
         output_dcmdir=os.path.join(args.output_dir,"dcm")
-        studyList=reader.copyValidSeriesAndUpdateStudyList(output_dcmdir,True)
+        studyList=reader.copyValidSeriesAndUpdateStudyList(output_dcmdir,args.accession_as_folder)
 
         # writeStudyListToCSV
         reader.writeStudyListToCSV(args.csv_file)
