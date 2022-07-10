@@ -24,6 +24,9 @@ def initLogger(name,logfile):
 
 if __name__ == "__main__":
 
+    default_include_tags_txt = os.path.join(
+        os.path.dirname(os.path.realpath(__file__)), "include_tags_default.txt")
+
     # command line parser
     parser = argparse.ArgumentParser(
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
@@ -34,6 +37,8 @@ if __name__ == "__main__":
     parser.add_argument("--csv_file",type=str,help="csv file with data to curate")
     parser.add_argument("--accession_as_folder",type=str,help="use accession number as folder name",default=True)
     parser.add_argument("--log_file",type=str,help="txt file with log info",default="curator_log.txt")
+    parser.add_argument("--include_tags_txt", type=str, default=default_include_tags_txt,
+        help="List of tags to retain in metadata JSON")
     args = parser.parse_args()
     
     # Initialize logger
@@ -76,5 +81,5 @@ if __name__ == "__main__":
         ne=niftiEngine.niftiEngine("NiftiEngine")
 
         # Given a csv file with 
-        ne.writeCSVToNifti(args.csv_file,args.output_dir)
+        ne.writeCSVToNifti(args.csv_file,args.output_dir,args.include_tags_txt)
         sys.exit()
