@@ -3,6 +3,7 @@ import os
 import csv
 import logging
 import glob
+import re
 from tqdm import tqdm
 logger=logging.getLogger("curator")
 
@@ -18,12 +19,17 @@ import tensorflow as tf
 contrast_names = ["Cine","T1","T1*","T2","T2*","T1rho","Trufi","LGE","PERF_AIF","PSIR","STIR","MAG","Scout","TSE", "DE"]
 orientation_names = ["2ch", "3ch","4ch","SAX","LAX","apex","mid","base","LVOT","Aoflow","AV","loc","candycane","paflow","VLA", "whole heart", "AO_AX"]
 
+def int_code(x):
+    return int(re.match('[0-9]+', os.path.basename(x)).group(0))
+
 def classifyNifti(input_dir):
     logger.info("classifier.classifyNifti")
+    search = sorted(glob.glob(os.path.join(input_dir,'**/*.nii'),recursive=True))
+    results = sorted(search, key = int_code)
 
     # read image files recursively from image directory
     directory = []
-    for file in glob.glob(os.path.join(input_dir,'**/*.nii'),recursive=True):
+    for file in results:
         directory.append((file, os.path.dirname(file)))
 
     # check for empty folder edge case

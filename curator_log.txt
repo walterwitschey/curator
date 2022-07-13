@@ -1487,3 +1487,21 @@
 2022-07-13 15:01:03,413 - curator - INFO - Classify Mode
 2022-07-13 15:01:03,414 - curator - INFO - classifier.classifyNifti
 2022-07-13 15:01:07,310 - curator - INFO -       generating predictions for 280 images
+2022-07-13 15:28:47,412 - curator - INFO - Classify Mode
+2022-07-13 15:28:47,412 - curator - INFO - classifier.classifyNifti
+2022-07-13 15:28:52,008 - curator - INFO -       generating predictions for 280 images
+2022-07-13 15:31:42,286 - curator - INFO - Classify Mode
+2022-07-13 15:31:42,287 - curator - INFO - classifier.classifyNifti
+2022-07-13 15:31:46,152 - curator - INFO -       generating predictions for 280 images
+2022-07-13 15:34:02,148 - curator - INFO - Classify Mode
+2022-07-13 15:34:02,148 - curator - INFO - classifier.classifyNifti
+2022-07-13 15:34:06,321 - curator - INFO -       generating predictions for 280 images
+2022-07-13 15:34:18,891 - curator - INFO - Classify Mode
+2022-07-13 15:34:18,891 - curator - INFO - classifier.classifyNifti
+2022-07-13 15:34:22,261 - curator - INFO -       generating predictions for 280 images
+2022-07-13 16:00:25,251 - curator - INFO - Classify Mode
+2022-07-13 16:00:25,251 - curator - INFO - classifier.classifyNifti
+2022-07-13 16:00:25,306 - curator - INFO -       generating predictions for 0 images
+2022-07-13 16:02:40,455 - curator - INFO - Classify Mode
+2022-07-13 16:02:40,455 - curator - INFO - classifier.classifyNifti
+2022-07-13 16:02:43,473 - curator - INFO -       generating predictions for 280 images
