@@ -1,2 +1,0 @@
-StudyInstanceUID,SeriesInstanceUID,accessionNumber,patientName,acquisitionNumber,seriesNumber,seriesDescription,dcmDirectory,niiDirectory,niiFile,isValidSeries,processType
-2.16.840.1.113669.632.21.6395764.2003308549.9012400901876498.2.1,2.16.840.1.113669.632.21.6395764.2003308549.32505709812136242924,,T2DM5,1,10109,post_MOLLI_4_1_3_1_2_midsax_MOCO_PSIR,C:/Users/jinse/Downloads/parse\dcm\10109_post_MOLLI_4_1_3_1_2_midsax_MOCO_PSIR,,,['NONE']

@@ -44,11 +44,13 @@ python curator.py parse --input_dir /dcmdirectory/ --output_dir /outdcmdirectory
 
 python curator.py nifti --csv_file csv_file.csv --output_dir /outdcmdirectory/
 
+python curator.py classify --input_dir /niidirectory/
+
 ```
 
 ## Arguments
 
-* `mode`: curator mode: ['parse','nifti','train','inference']
+* `mode`: curator mode: ['parse','nifti','train','classify']
 * `--input_dir`: folder containing dicom images to be curated (will search all subdirectories of this folder).
 * `--output_dir`: folder to place all the sorted dicom images by accession and series
 * `--csv_file`: csv file containing a summary of all studies and series. Each series is a row.
@@ -69,7 +71,6 @@ python curator.py nifti --csv_file csv_file.csv --output_dir /outdcmdirectory/
 * Train a NN to label imaging data
 * Mandatory arguments: --input_dir, --csv_file
 
-* mode = "inference"
+* mode = "classify"
 * Given a trained NN, make new inferences on unseen data
-* Mandartory arguments: --csv_file
-
+* Mandartory arguments: --input_dir

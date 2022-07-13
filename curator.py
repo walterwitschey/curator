@@ -82,7 +82,8 @@ if __name__ == "__main__":
         ne=niftiEngine.niftiEngine("NiftiEngine")
 
         # Given a csv file with 
-        ne.writeCSVToNifti(args.csv_file,args.output_dir,args.include_tags_txt)
+        print(type(args.accession_as_folder))
+        ne.writeCSVToNifti(args.csv_file,args.output_dir,args.include_tags_txt,args.accession_as_folder)
         sys.exit()
 
     # Classify mode
@@ -91,10 +92,10 @@ if __name__ == "__main__":
         # A valid csv file has to be given as an input
         logger.info("Classify Mode")
         
-        if args.csv_file is None:
-            logger.error("    Check that --csv_file is defined")
+        if args.input_dir is None:
+            logger.error("    Check that --input_dir is defined")
             sys.exit()
         
-        classifier.classifyNifti(args.csv_file)
+        classifier.classifyNifti(args.input_dir)
         sys.exit()
     

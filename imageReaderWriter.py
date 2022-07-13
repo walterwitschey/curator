@@ -7,6 +7,9 @@ import shutil
 import logging
 logger=logging.getLogger("curator")
 
+#debug
+import pandas as pd
+
 # pydicom
 import pydicom
 

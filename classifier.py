@@ -2,6 +2,8 @@ from PIL import Image as im
 import os
 import csv
 import logging
+import glob
+from tqdm import tqdm
 logger=logging.getLogger("curator")
 
 # load dependencies
@@ -16,38 +18,57 @@ import tensorflow as tf
 contrast_names = ["Cine","T1","T1*","T2","T2*","T1rho","Trufi","LGE","PERF_AIF","PSIR","STIR","MAG","Scout","TSE", "DE"]
 orientation_names = ["2ch", "3ch","4ch","SAX","LAX","apex","mid","base","LVOT","Aoflow","AV","loc","candycane","paflow","VLA", "whole heart", "AO_AX"]
 
-def classifyNifti(csv_file):
+def classifyNifti(input_dir):
     logger.info("classifier.classifyNifti")
-    df=pd.read_csv(csv_file)
+
+    # read image files recursively from image directory
+    directory = []
+    for file in glob.glob(os.path.join(input_dir,'**/*.nii'),recursive=True):
+        directory.append((file, os.path.dirname(file)))
+
+    # check for empty folder edge case
+    if len(directory) == 0:
+        logger.error("classifier was unable to fetch any images from input directory")
+        return
+
     img_array = []
-
-    # read csv file
-    for index, row in df.iterrows():
+    for imgfile, folderpath in tqdm(directory):
         try:
-            path = row["niiDirectory"]
-            img = nb.load(path).get_fdata()
+            img = nb.load(imgfile).get_fdata()
         except:
-            logging.warning('      could not find nifti file with path : %s',path)
+            logging.warning('      could not find nifti file with path : %s',imgfile)
         else:
-            img_array.append(preprocess_image(img, path))
+            img_array.append(preprocess_image(img, imgfile))
     img_array = np.array(img_array)
-
-    # === debugging purposes only ===
-    # save_images(img_array, os.path.join(os.path.dirname(os.path.realpath(__file__)), 'images'))
 
     # generate predictions
     logger.info('      generating predictions for %d images', img_array.shape[0])
     orientation, contrast = generate_predictions(img_array)
 
-    # write predictions to csv file
-    with open('predictions.csv',"w", newline='') as f:
-        writer = csv.writer(f)
-        writer.writerow(['File Path', 'Orientation', 'Contrast'])
+    # === debugging purposes only ===
+    #save_images(img_array, os.path.join(os.path.dirname(os.path.realpath(__file__)), 'images'), orientation, contrast)
 
-        for index, row in df.iterrows():
-            nii_path = row["niiDirectory"]
-            writer.writerow([nii_path, orientation_names[orientation[index]], contrast_names[contrast[index]]])
+    # iterate through directory go generate separate csv file for each study
+    parsedirectory, chunk = ([] for i in range(2))
+    initial = directory[0][1]
+    for num in range(len(directory)):
+        if initial == directory[num][1]:
+            chunk.append(directory[num] + (orientation_names[orientation[num]], contrast_names[contrast[num]]))
+        else:
+            parsedirectory.append(chunk)
+            chunk = []
+            chunk.append(directory[num] + (orientation_names[orientation[num]], contrast_names[contrast[num]]))
+            initial = directory[num][1]
+    parsedirectory.append(chunk)
 
+    for study in parsedirectory:
+        with open(os.path.join(study[0][1],'predictions.csv'),"w", newline='') as f:
+            writer = csv.writer(f)
+            writer.writerow(['File Name', 'Orientation', 'Contrast'])
+
+            for image in study:
+                filename = image[0][len(image[1]) + 1:]
+                writer.writerow([filename,image[2],image[3]])
 
 def preprocess_image(img, path):
 
@@ -82,14 +103,14 @@ def generate_predictions(img_array):
     contrasts = np.argmax(predict_contrast.predict(img_array), axis=1)
     
     # print results (debugging only)
-    for i in range(orientations.shape[0]):
-        print('orientation: %s', orientation_names[orientations[i]])
-        print('contrast: %s', contrast_names[contrasts[i]])
+    #for i in range(orientations.shape[0]):
+        #print('orientation: %s', orientation_names[orientations[i]])
+        #print('contrast: %s', contrast_names[contrasts[i]])
 
     return (orientations, contrasts)
 
 # save mean slice images to local path (debugging purposes only)
-def save_images(image_array, file_path):
+def save_images(image_array, file_path, orientation, contrast):
     if not(os.path.isdir(file_path)):
         os.mkdir(file_path)
 
@@ -98,4 +119,5 @@ def save_images(image_array, file_path):
         plt.imshow(image_array[slice], cmap=plt.cm.binary)
         plt.colorbar()
         plt.grid(False)
+        plt.title(orientation_names[orientation[slice]] + ' ' + contrast_names[contrast[slice]])
         plt.savefig(os.path.join(file_path, (str(slice) + '.png')))

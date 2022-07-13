@@ -132,3 +132,1358 @@
 2022-07-12 20:07:55,720 - curator - INFO -     Searching (at least) 2 folder level(s) deep
 2022-07-12 20:07:55,810 - curator - INFO - writeStudyListToCSV()
 2022-07-12 20:07:55,811 - curator - INFO -     csv file written: csv_file5.csv
+2022-07-12 22:59:35,038 - curator - INFO - Parsing Mode
+2022-07-12 22:59:35,038 - curator - INFO - imageReaderWriter.init()
+2022-07-12 22:59:35,038 - curator - INFO - FileReader.queryDirectory()
+2022-07-12 22:59:35,039 - curator - INFO -     Querying Directory for Dicom Files
+2022-07-12 22:59:35,039 - curator - INFO -     Searching C:\Users\jinse\Downloads\T2DM5\61060391\44901525 for dicom files
+2022-07-12 22:59:35,039 - curator - INFO -     Searching (at least) 2 folder level(s) deep
+2022-07-12 22:59:35,055 - curator - INFO - FileReader.copyValidSeriesAndUpdateStudyList()
+2022-07-12 22:59:35,055 - curator - INFO -     Copying valid series to C:\Users\jinse\Downloads\parse\dcm
+2022-07-12 22:59:35,062 - curator - INFO - FileReader.queryDirectory()
+2022-07-12 22:59:35,062 - curator - INFO -     Querying Directory for Dicom Files
+2022-07-12 22:59:35,062 - curator - INFO -     Searching C:\Users\jinse\Downloads\parse\dcm for dicom files
+2022-07-12 22:59:35,063 - curator - INFO -     Searching (at least) 2 folder level(s) deep
+2022-07-12 22:59:35,171 - curator - INFO - writeStudyListToCSV()
+2022-07-12 22:59:35,172 - curator - INFO -     csv file written: csv_file.csv
+2022-07-12 23:03:28,381 - curator - INFO - Parsing Mode
+2022-07-12 23:03:28,382 - curator - INFO - imageReaderWriter.init()
+2022-07-12 23:03:28,382 - curator - INFO - FileReader.queryDirectory()
+2022-07-12 23:03:28,382 - curator - INFO -     Querying Directory for Dicom Files
+2022-07-12 23:03:28,382 - curator - INFO -     Searching C:\Users\jinse\Downloads\T2DM5\61060391\44901525 for dicom files
+2022-07-12 23:03:28,382 - curator - INFO -     Searching (at least) 2 folder level(s) deep
+2022-07-12 23:03:28,395 - curator - INFO - FileReader.copyValidSeriesAndUpdateStudyList()
+2022-07-12 23:03:28,395 - curator - INFO -     Copying valid series to C:\Users\jinse\Downloads\parse\dcm
+2022-07-12 23:03:28,400 - curator - INFO - FileReader.queryDirectory()
+2022-07-12 23:03:28,400 - curator - INFO -     Querying Directory for Dicom Files
+2022-07-12 23:03:28,400 - curator - INFO -     Searching C:\Users\jinse\Downloads\parse\dcm for dicom files
+2022-07-12 23:03:28,400 - curator - INFO -     Searching (at least) 2 folder level(s) deep
+2022-07-12 23:03:28,498 - curator - INFO - writeStudyListToCSV()
+2022-07-12 23:03:28,499 - curator - INFO -     csv file written: csv_file2.csv
+2022-07-12 23:03:47,649 - curator - INFO - Parsing Mode
+2022-07-12 23:03:47,649 - curator - INFO - imageReaderWriter.init()
+2022-07-12 23:03:47,649 - curator - INFO - FileReader.queryDirectory()
+2022-07-12 23:03:47,649 - curator - INFO -     Querying Directory for Dicom Files
+2022-07-12 23:03:47,650 - curator - INFO -     Searching C:\Users\jinse\Downloads\T2DM5\61060391\44901525 for dicom files
+2022-07-12 23:03:47,650 - curator - INFO -     Searching (at least) 2 folder level(s) deep
+2022-07-12 23:03:47,664 - curator - INFO - FileReader.copyValidSeriesAndUpdateStudyList()
+2022-07-12 23:03:47,664 - curator - INFO -     Copying valid series to C:\Users\jinse\Downloads\parse\dcm
+2022-07-12 23:03:47,669 - curator - INFO - FileReader.queryDirectory()
+2022-07-12 23:03:47,669 - curator - INFO -     Querying Directory for Dicom Files
+2022-07-12 23:03:47,670 - curator - INFO -     Searching C:\Users\jinse\Downloads\parse\dcm for dicom files
+2022-07-12 23:03:47,670 - curator - INFO -     Searching (at least) 2 folder level(s) deep
+2022-07-12 23:03:47,772 - curator - INFO - writeStudyListToCSV()
+2022-07-12 23:03:47,772 - curator - INFO -     csv file written: csv_file3.csv
+2022-07-12 23:05:28,353 - curator - INFO - Parsing Mode
+2022-07-12 23:05:28,353 - curator - INFO - imageReaderWriter.init()
+2022-07-12 23:05:28,353 - curator - INFO - FileReader.queryDirectory()
+2022-07-12 23:05:28,353 - curator - INFO -     Querying Directory for Dicom Files
+2022-07-12 23:05:28,354 - curator - INFO -     Searching C:\Users\jinse\Downloads\T2DM5\61060391\44901525 for dicom files
+2022-07-12 23:05:28,354 - curator - INFO -     Searching (at least) 2 folder level(s) deep
+2022-07-12 23:05:28,367 - curator - INFO - FileReader.copyValidSeriesAndUpdateStudyList()
+2022-07-12 23:05:28,367 - curator - INFO -     Copying valid series to C:\Users\jinse\Downloads\parse\dcm
+2022-07-12 23:05:28,373 - curator - INFO - FileReader.queryDirectory()
+2022-07-12 23:05:28,373 - curator - INFO -     Querying Directory for Dicom Files
+2022-07-12 23:05:28,373 - curator - INFO -     Searching C:\Users\jinse\Downloads\parse\dcm for dicom files
+2022-07-12 23:05:28,374 - curator - INFO -     Searching (at least) 2 folder level(s) deep
+2022-07-12 23:05:28,486 - curator - INFO - writeStudyListToCSV()
+2022-07-12 23:05:28,487 - curator - INFO -     csv file written: csv_file3.csv
+2022-07-12 23:07:45,441 - curator - INFO - Parsing Mode
+2022-07-12 23:07:45,442 - curator - INFO - imageReaderWriter.init()
+2022-07-12 23:07:45,442 - curator - INFO - FileReader.queryDirectory()
+2022-07-12 23:07:45,442 - curator - INFO -     Querying Directory for Dicom Files
+2022-07-12 23:07:45,442 - curator - INFO -     Searching C:\Users\jinse\Downloads\T2DM5\61060391\44901525 for dicom files
+2022-07-12 23:07:45,443 - curator - INFO -     Searching (at least) 2 folder level(s) deep
+2022-07-12 23:07:45,456 - curator - INFO - FileReader.copyValidSeriesAndUpdateStudyList()
+2022-07-12 23:07:45,457 - curator - INFO -     Copying valid series to C:\Users\jinse\Downloads\parse\dcm
+2022-07-12 23:07:45,462 - curator - INFO - FileReader.queryDirectory()
+2022-07-12 23:07:45,463 - curator - INFO -     Querying Directory for Dicom Files
+2022-07-12 23:07:45,463 - curator - INFO -     Searching C:\Users\jinse\Downloads\parse\dcm for dicom files
+2022-07-12 23:07:45,463 - curator - INFO -     Searching (at least) 2 folder level(s) deep
+2022-07-12 23:07:45,574 - curator - INFO - writeStudyListToCSV()
+2022-07-12 23:07:45,575 - curator - INFO -     csv file written: csv_file3.csv
+2022-07-12 23:08:31,184 - curator - INFO - Parsing Mode
+2022-07-12 23:08:31,185 - curator - INFO - imageReaderWriter.init()
+2022-07-12 23:08:31,185 - curator - INFO - FileReader.queryDirectory()
+2022-07-12 23:08:31,185 - curator - INFO -     Querying Directory for Dicom Files
+2022-07-12 23:08:31,185 - curator - INFO -     Searching C:\Users\jinse\Downloads\T2DM5\61060391\44901525 for dicom files
+2022-07-12 23:08:31,185 - curator - INFO -     Searching (at least) 2 folder level(s) deep
+2022-07-12 23:08:31,199 - curator - INFO - FileReader.copyValidSeriesAndUpdateStudyList()
+2022-07-12 23:08:31,199 - curator - INFO -     Copying valid series to C:\Users\jinse\Downloads\parse\dcm
+2022-07-12 23:08:31,205 - curator - INFO - FileReader.queryDirectory()
+2022-07-12 23:08:31,205 - curator - INFO -     Querying Directory for Dicom Files
+2022-07-12 23:08:31,205 - curator - INFO -     Searching C:\Users\jinse\Downloads\parse\dcm for dicom files
+2022-07-12 23:08:31,205 - curator - INFO -     Searching (at least) 2 folder level(s) deep
+2022-07-12 23:08:31,317 - curator - INFO - writeStudyListToCSV()
+2022-07-12 23:08:31,318 - curator - INFO -     csv file written: csv_file3.csv
+2022-07-12 23:08:45,768 - curator - INFO - Parsing Mode
+2022-07-12 23:08:45,769 - curator - INFO - imageReaderWriter.init()
+2022-07-12 23:08:45,769 - curator - INFO - FileReader.queryDirectory()
+2022-07-12 23:08:45,769 - curator - INFO -     Querying Directory for Dicom Files
+2022-07-12 23:08:45,769 - curator - INFO -     Searching C:\Users\jinse\Downloads\T2DM5\61060391\44901525 for dicom files
+2022-07-12 23:08:45,769 - curator - INFO -     Searching (at least) 2 folder level(s) deep
+2022-07-12 23:08:45,783 - curator - INFO - FileReader.copyValidSeriesAndUpdateStudyList()
+2022-07-12 23:08:45,783 - curator - INFO -     Copying valid series to C:\Users\jinse\Downloads\parse\dcm
+2022-07-12 23:08:45,788 - curator - INFO - FileReader.queryDirectory()
+2022-07-12 23:08:45,788 - curator - INFO -     Querying Directory for Dicom Files
+2022-07-12 23:08:45,789 - curator - INFO -     Searching C:\Users\jinse\Downloads\parse\dcm for dicom files
+2022-07-12 23:08:45,789 - curator - INFO -     Searching (at least) 2 folder level(s) deep
+2022-07-12 23:08:45,902 - curator - INFO - writeStudyListToCSV()
+2022-07-12 23:08:45,903 - curator - INFO -     csv file written: csv_file3.csv
+2022-07-12 23:09:55,930 - curator - INFO - Parsing Mode
+2022-07-12 23:09:55,931 - curator - INFO - imageReaderWriter.init()
+2022-07-12 23:09:55,931 - curator - INFO - FileReader.queryDirectory()
+2022-07-12 23:09:55,931 - curator - INFO -     Querying Directory for Dicom Files
+2022-07-12 23:09:55,931 - curator - INFO -     Searching C:\Users\jinse\Downloads\T2DM5\61060391\85523310 for dicom files
+2022-07-12 23:09:55,931 - curator - INFO -     Searching (at least) 2 folder level(s) deep
+2022-07-12 23:09:56,114 - curator - INFO - FileReader.copyValidSeriesAndUpdateStudyList()
+2022-07-12 23:09:56,114 - curator - INFO -     Copying valid series to C:\Users\jinse\Downloads\parse\dcm
+2022-07-12 23:09:56,132 - curator - INFO - FileReader.queryDirectory()
+2022-07-12 23:09:56,133 - curator - INFO -     Querying Directory for Dicom Files
+2022-07-12 23:09:56,133 - curator - INFO -     Searching C:\Users\jinse\Downloads\parse\dcm for dicom files
+2022-07-12 23:09:56,133 - curator - INFO -     Searching (at least) 2 folder level(s) deep
+2022-07-12 23:09:56,370 - curator - INFO - writeStudyListToCSV()
+2022-07-12 23:09:56,371 - curator - INFO -     csv file written: csv_file3.csv
+2022-07-13 10:55:17,629 - curator - INFO - Parsing Mode
+2022-07-13 10:55:17,629 - curator - INFO - imageReaderWriter.init()
+2022-07-13 10:55:17,629 - curator - INFO - FileReader.queryDirectory()
+2022-07-13 10:55:17,629 - curator - INFO -     Querying Directory for Dicom Files
+2022-07-13 10:55:17,629 - curator - INFO -     Searching C:\Users\jinse\Downloads\T2DM5\61060391\44571258 for dicom files
+2022-07-13 10:55:17,630 - curator - INFO -     Searching (at least) 2 folder level(s) deep
+2022-07-13 10:55:17,690 - curator - INFO - FileReader.copyValidSeriesAndUpdateStudyList()
+2022-07-13 10:55:17,690 - curator - INFO -     Copying valid series to C:\Users\jinse\Downloads\parse\dcm
+2022-07-13 10:55:17,697 - curator - INFO - FileReader.queryDirectory()
+2022-07-13 10:55:17,697 - curator - INFO -     Querying Directory for Dicom Files
+2022-07-13 10:55:17,697 - curator - INFO -     Searching C:\Users\jinse\Downloads\parse\dcm for dicom files
+2022-07-13 10:55:17,697 - curator - INFO -     Searching (at least) 2 folder level(s) deep
+2022-07-13 10:55:18,220 - curator - INFO - writeStudyListToCSV()
+2022-07-13 10:55:18,221 - curator - INFO -     csv file written: csv_file5.csv
+2022-07-13 10:58:53,510 - curator - INFO - Nifti Mode
+2022-07-13 10:58:53,510 - curator - INFO - niftiEngine.init()
+2022-07-13 10:58:53,510 - curator - INFO - niftiEngine.convertCSVToNifti
+2022-07-13 10:58:53,527 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 10:58:53,635 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 10:58:53,686 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 10:58:53,726 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 10:58:53,769 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 10:58:53,811 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 10:58:53,857 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 10:58:53,899 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 10:58:53,943 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 10:58:53,983 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 10:58:54,047 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 10:58:54,094 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 10:58:54,136 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:03:10,414 - curator - INFO - Nifti Mode
+2022-07-13 11:03:10,415 - curator - INFO - niftiEngine.init()
+2022-07-13 11:03:10,415 - curator - INFO - niftiEngine.convertCSVToNifti
+2022-07-13 11:03:10,419 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:03:10,472 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:03:10,512 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:03:10,554 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:03:10,592 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:03:10,633 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:03:10,673 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:03:10,712 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:03:10,752 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:03:10,791 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:03:10,851 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:03:10,891 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:03:10,931 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:04:06,612 - curator - INFO - Nifti Mode
+2022-07-13 11:04:06,612 - curator - INFO - niftiEngine.init()
+2022-07-13 11:04:06,612 - curator - INFO - niftiEngine.convertCSVToNifti
+2022-07-13 11:04:06,617 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:04:06,664 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:04:06,709 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:04:06,748 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:04:06,787 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:04:06,833 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:04:06,874 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:04:06,913 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:04:06,951 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:04:06,991 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:04:07,045 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:04:07,083 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:04:07,122 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:05:00,298 - curator - INFO - Nifti Mode
+2022-07-13 11:05:00,299 - curator - INFO - niftiEngine.init()
+2022-07-13 11:05:00,299 - curator - INFO - niftiEngine.convertCSVToNifti
+2022-07-13 11:05:00,304 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:05:00,350 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:05:00,398 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:05:00,438 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:05:00,471 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:05:00,501 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:05:00,531 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:05:00,566 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:05:00,597 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:05:00,629 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:05:00,687 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:05:00,727 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:05:00,770 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:06:34,016 - curator - INFO - Nifti Mode
+2022-07-13 11:06:34,016 - curator - INFO - niftiEngine.init()
+2022-07-13 11:06:34,016 - curator - INFO - niftiEngine.convertCSVToNifti
+2022-07-13 11:06:34,021 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:06:34,065 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:06:34,100 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:06:34,132 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:06:34,164 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:06:34,198 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:06:34,229 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:06:34,263 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:06:34,295 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:06:34,328 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:06:34,386 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:06:34,427 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:06:34,468 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:08:29,773 - curator - INFO - Nifti Mode
+2022-07-13 11:08:29,774 - curator - INFO - niftiEngine.init()
+2022-07-13 11:08:29,774 - curator - INFO - niftiEngine.convertCSVToNifti
+2022-07-13 11:08:29,779 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:08:29,832 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:08:29,875 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:08:29,913 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:08:29,957 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:08:29,997 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:08:30,039 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:08:30,080 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:08:30,122 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:08:30,163 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:08:30,219 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:08:30,258 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:08:30,297 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:16:18,324 - curator - INFO - Nifti Mode
+2022-07-13 11:16:18,325 - curator - INFO - niftiEngine.init()
+2022-07-13 11:16:18,325 - curator - INFO - niftiEngine.convertCSVToNifti
+2022-07-13 11:16:18,330 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:16:18,387 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:16:18,432 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:16:18,474 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:16:18,513 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:16:18,554 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:16:18,595 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:16:18,636 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:16:18,677 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:16:18,720 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:16:18,777 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:16:18,817 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:16:18,858 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:21:16,184 - curator - INFO - Nifti Mode
+2022-07-13 11:21:16,184 - curator - INFO - niftiEngine.init()
+2022-07-13 11:21:16,185 - curator - INFO - niftiEngine.convertCSVToNifti
+2022-07-13 11:21:16,189 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:21:16,238 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:21:16,284 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:21:16,326 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:21:16,372 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:21:16,412 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:21:16,451 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:21:16,494 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:21:16,537 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:21:16,581 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:21:16,642 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:21:16,687 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:21:16,729 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:22:43,320 - curator - INFO - Nifti Mode
+2022-07-13 11:22:43,320 - curator - INFO - niftiEngine.init()
+2022-07-13 11:22:43,321 - curator - INFO - niftiEngine.convertCSVToNifti
+2022-07-13 11:22:43,326 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:22:43,373 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:22:43,415 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:22:43,456 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:22:43,500 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:22:43,542 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:22:43,582 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:22:43,621 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:22:43,659 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:22:43,697 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:22:43,752 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:22:43,789 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:22:43,827 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:23:21,319 - curator - INFO - Nifti Mode
+2022-07-13 11:23:21,319 - curator - INFO - niftiEngine.init()
+2022-07-13 11:23:21,320 - curator - INFO - niftiEngine.convertCSVToNifti
+2022-07-13 11:23:21,325 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:23:21,378 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:23:21,418 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:23:21,461 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:23:21,502 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:23:21,542 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:23:21,582 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:23:21,621 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:23:21,657 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:23:21,698 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:23:21,755 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:23:21,795 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:23:21,834 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:26:29,489 - curator - INFO - Nifti Mode
+2022-07-13 11:26:29,490 - curator - INFO - niftiEngine.init()
+2022-07-13 11:26:29,490 - curator - INFO - niftiEngine.convertCSVToNifti
+2022-07-13 11:26:29,494 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:26:29,543 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:26:29,589 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:26:29,631 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:26:29,673 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:26:29,715 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:26:29,758 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:26:29,796 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:26:29,834 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:26:29,873 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:26:29,928 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:26:29,966 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:26:30,005 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\nan
+2022-07-13 11:26:38,851 - curator - INFO - Nifti Mode
+2022-07-13 11:26:38,852 - curator - INFO - niftiEngine.init()
+2022-07-13 11:26:38,852 - curator - INFO - niftiEngine.convertCSVToNifti
+2022-07-13 11:26:38,858 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:26:38,911 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:26:38,956 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:26:38,996 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:26:39,043 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:26:39,084 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:26:39,124 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:26:39,163 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:26:39,202 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:26:39,242 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:26:39,296 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:26:39,336 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:26:39,374 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:30:16,471 - curator - INFO - Parsing Mode
+2022-07-13 11:30:16,471 - curator - INFO - imageReaderWriter.init()
+2022-07-13 11:30:16,471 - curator - INFO - FileReader.queryDirectory()
+2022-07-13 11:30:16,472 - curator - INFO -     Querying Directory for Dicom Files
+2022-07-13 11:30:16,472 - curator - INFO -     Searching C:\Users\jinse\Downloads\T2DM5\61060391 for dicom files
+2022-07-13 11:30:16,472 - curator - INFO -     Searching (at least) 2 folder level(s) deep
+2022-07-13 11:30:21,889 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.21911100062085510655.dcm
+
+2022-07-13 11:30:21,895 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.22078872222095530655.dcm
+
+2022-07-13 11:30:21,900 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.22917733022025390655.dcm
+
+2022-07-13 11:30:21,907 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.23085505182035410655.dcm
+
+2022-07-13 11:30:21,915 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.23253277342005350655.dcm
+
+2022-07-13 11:30:21,923 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.23421049502015370655.dcm
+
+2022-07-13 11:30:21,930 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.23588821662065470655.dcm
+
+2022-07-13 11:30:21,937 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.23756593822075490655.dcm
+
+2022-07-13 11:30:21,943 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.23924365982045430655.dcm
+
+2022-07-13 11:30:21,951 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.24092138142055450655.dcm
+
+2022-07-13 11:30:21,958 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.27279809182065470655.dcm
+
+2022-07-13 11:30:21,965 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.27447581342075490655.dcm
+
+2022-07-13 11:30:21,972 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.28286442142005350655.dcm
+
+2022-07-13 11:30:21,980 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.28454214302015370655.dcm
+
+2022-07-13 11:30:21,987 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.28789758621995330655.dcm
+
+2022-07-13 11:30:21,996 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.28957530782045430655.dcm
+
+2022-07-13 11:30:22,007 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.29125302942055450655.dcm
+
+2022-07-13 11:30:22,018 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.29293075102025390655.dcm
+
+2022-07-13 11:30:22,028 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.29460847262035410655.dcm
+
+2022-07-13 11:30:22,036 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.32648518302125590655.dcm
+
+2022-07-13 11:30:22,042 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.32816290462135610655.dcm
+
+2022-07-13 11:30:22,049 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.33655151262065470655.dcm
+
+2022-07-13 11:30:22,057 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.33822923422075490655.dcm
+
+2022-07-13 11:30:22,064 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.33990695582045430655.dcm
+
+2022-07-13 11:30:22,071 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.34158467742055450655.dcm
+
+2022-07-13 11:30:22,077 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.34326239902105550655.dcm
+
+2022-07-13 11:30:22,083 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.34494012062115570655.dcm
+
+2022-07-13 11:30:22,088 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.34661784222085510655.dcm
+
+2022-07-13 11:30:22,093 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.34829556382095530655.dcm
+
+2022-07-13 11:30:22,099 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.38017227422105550655.dcm
+
+2022-07-13 11:30:22,107 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.38184999582115570655.dcm
+
+2022-07-13 11:30:22,113 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.39023860382045430655.dcm
+
+2022-07-13 11:30:22,119 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.39191632542055450655.dcm
+
+2022-07-13 11:30:22,126 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.39359404702025390655.dcm
+
+2022-07-13 11:30:22,132 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.39527176862035410655.dcm
+
+2022-07-13 11:30:22,139 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.39694949022085510655.dcm
+
+2022-07-13 11:30:22,146 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.39862721182095530655.dcm
+
+2022-07-13 11:30:22,153 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.40030493342065470655.dcm
+
+2022-07-13 11:30:22,159 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.40198265502075490655.dcm
+
+2022-07-13 11:30:22,166 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.58049727021456306553.dcm
+
+2022-07-13 11:30:22,172 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.68116056620855106553.dcm
+
+2022-07-13 11:30:22,178 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.69793778220955306553.dcm
+
+2022-07-13 11:30:22,185 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.71471499820654706553.dcm
+
+2022-07-13 11:30:22,191 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.73149221420754906553.dcm
+
+2022-07-13 11:30:22,197 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.74826943021255906553.dcm
+
+2022-07-13 11:30:22,205 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.76504664621356106553.dcm
+
+2022-07-13 11:30:22,212 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.78182386221055506553.dcm
+
+2022-07-13 11:30:22,218 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\44726154\00000_2.16.840.1.113669.632.21.6395764.2003308549.79860107821155706553.dcm
+
+2022-07-13 11:30:23,420 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00001_2.16.840.1.113669.632.21.6395764.2003308549.42515963832498415236.dcm
+
+2022-07-13 11:30:23,425 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00002_2.16.840.1.113669.632.21.6395764.2003308549.42859800942407915237.dcm
+
+2022-07-13 11:30:23,431 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00003_2.16.840.1.113669.632.21.6395764.2003308549.42760298252296775238.dcm
+
+2022-07-13 11:30:23,437 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00004_2.16.840.1.113669.632.21.6395764.2003308549.41869329442266975239.dcm
+
+2022-07-13 11:30:23,444 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00005_2.16.840.1.113669.632.21.6395764.2003308549.42883008642447995239.dcm
+
+2022-07-13 11:30:23,450 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00006_2.16.840.1.113669.632.21.6395764.2003308549.23634121372186505240.dcm
+
+2022-07-13 11:30:23,457 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00007_2.16.840.1.113669.632.21.6395764.2003308549.23571289522246935241.dcm
+
+2022-07-13 11:30:23,464 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00008_2.16.840.1.113669.632.21.6395764.2003308549.42089720522106861524.dcm
+
+2022-07-13 11:30:23,471 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00009_2.16.840.1.113669.632.21.6395764.2003308549.23913696592347695242.dcm
+
+2022-07-13 11:30:23,478 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00010_2.16.840.1.113669.632.21.6395764.2003308549.22972745222166315243.dcm
+
+2022-07-13 11:30:23,486 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00011_2.16.840.1.113669.632.21.6395764.2003308549.22983290692156085244.dcm
+
+2022-07-13 11:30:23,492 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00012_2.16.840.1.113669.632.21.6395764.2003308549.23098555812326975244.dcm
+
+2022-07-13 11:30:23,499 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00013_2.16.840.1.113669.632.21.6395764.2003308549.23601501882417535245.dcm
+
+2022-07-13 11:30:23,506 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00014_2.16.840.1.113669.632.21.6395764.2003308549.24114958232246885246.dcm
+
+2022-07-13 11:30:23,513 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00015_2.16.840.1.113669.632.21.6395764.2003308549.22972223662166185247.dcm
+
+2022-07-13 11:30:23,519 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00016_2.16.840.1.113669.632.21.6395764.2003308549.24132421902447885247.dcm
+
+2022-07-13 11:30:23,526 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00017_2.16.840.1.113669.632.21.6395764.2003308549.23611685452316915248.dcm
+
+2022-07-13 11:30:23,532 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00018_2.16.840.1.113669.632.21.6395764.2003308549.23485130082276485249.dcm
+
+2022-07-13 11:30:23,538 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00019_2.16.840.1.113669.632.21.6395764.2003308549.39402414632117661525.dcm
+
+2022-07-13 11:30:23,544 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00020_2.16.840.1.113669.632.21.6395764.2003308549.26124125852287515250.dcm
+
+2022-07-13 11:30:23,551 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00021_2.16.840.1.113669.632.21.6395764.2003308549.24617767762176705251.dcm
+
+2022-07-13 11:30:23,557 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00022_2.16.840.1.113669.632.21.6395764.2003308549.26431726032226975252.dcm
+
+2022-07-13 11:30:23,564 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00023_2.16.840.1.113669.632.21.6395764.2003308549.23143703721872611525.dcm
+
+2022-07-13 11:30:23,572 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00024_2.16.840.1.113669.632.21.6395764.2003308549.24596023462297535253.dcm
+
+2022-07-13 11:30:23,580 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00025_2.16.840.1.113669.632.21.6395764.2003308549.26808569892277235254.dcm
+
+2022-07-13 11:30:23,588 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00026_2.16.840.1.113669.632.21.6395764.2003308549.26630376922166535255.dcm
+
+2022-07-13 11:30:23,595 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00027_2.16.840.1.113669.632.21.6395764.2003308549.26003449082246605255.dcm
+
+2022-07-13 11:30:23,603 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00028_2.16.840.1.113669.632.21.6395764.2003308549.25815249272337125256.dcm
+
+2022-07-13 11:30:23,609 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00029_2.16.840.1.113669.632.21.6395764.2003308549.24630171182206715257.dcm
+
+2022-07-13 11:30:23,616 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00030_2.16.840.1.113669.632.21.6395764.2003308549.25772932492246955258.dcm
+
+2022-07-13 11:30:23,623 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00031_2.16.840.1.113669.632.21.6395764.2003308549.26314499372327245258.dcm
+
+2022-07-13 11:30:23,629 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00032_2.16.840.1.113669.632.21.6395764.2003308549.25800615682307065259.dcm
+
+2022-07-13 11:30:23,636 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00033_2.16.840.1.113669.632.21.6395764.2003308549.32710364092247195300.dcm
+
+2022-07-13 11:30:23,643 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00034_2.16.840.1.113669.632.21.6395764.2003308549.34706343132166675300.dcm
+
+2022-07-13 11:30:23,651 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00035_2.16.840.1.113669.632.21.6395764.2003308549.32661510962247195301.dcm
+
+2022-07-13 11:30:23,658 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00036_2.16.840.1.113669.632.21.6395764.2003308549.34723440432247195302.dcm
+
+2022-07-13 11:30:23,664 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00037_2.16.840.1.113669.632.21.6395764.2003308549.34808081382227215303.dcm
+
+2022-07-13 11:30:23,672 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00038_2.16.840.1.113669.632.21.6395764.2003308549.32692621702307305303.dcm
+
+2022-07-13 11:30:23,680 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00039_2.16.840.1.113669.632.21.6395764.2003308549.33824764292207005304.dcm
+
+2022-07-13 11:30:23,688 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00040_2.16.840.1.113669.632.21.6395764.2003308549.33632860122287575305.dcm
+
+2022-07-13 11:30:23,697 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00041_2.16.840.1.113669.632.21.6395764.2003308549.34705173242307205305.dcm
+
+2022-07-13 11:30:23,705 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00042_2.16.840.1.113669.632.21.6395764.2003308549.34547826392236785306.dcm
+
+2022-07-13 11:30:23,712 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00043_2.16.840.1.113669.632.21.6395764.2003308549.34292694062357735307.dcm
+
+2022-07-13 11:30:23,718 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00044_2.16.840.1.113669.632.21.6395764.2003308549.34830867852196865308.dcm
+
+2022-07-13 11:30:23,725 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00045_2.16.840.1.113669.632.21.6395764.2003308549.32879637292337475308.dcm
+
+2022-07-13 11:30:23,732 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00046_2.16.840.1.113669.632.21.6395764.2003308549.33844701442287075309.dcm
+
+2022-07-13 11:30:23,738 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00047_2.16.840.1.113669.632.21.6395764.2003308549.37577553852186615310.dcm
+
+2022-07-13 11:30:23,745 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00048_2.16.840.1.113669.632.21.6395764.2003308549.37514757852377715310.dcm
+
+2022-07-13 11:30:23,751 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00049_2.16.840.1.113669.632.21.6395764.2003308549.36857307442116185311.dcm
+
+2022-07-13 11:30:23,758 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00050_2.16.840.1.113669.632.21.6395764.2003308549.36853869872176675312.dcm
+
+2022-07-13 11:30:23,766 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00051_2.16.840.1.113669.632.21.6395764.2003308549.28739237002258191531.dcm
+
+2022-07-13 11:30:23,774 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00052_2.16.840.1.113669.632.21.6395764.2003308549.35552692902367625313.dcm
+
+2022-07-13 11:30:23,783 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00053_2.16.840.1.113669.632.21.6395764.2003308549.37188509732347455314.dcm
+
+2022-07-13 11:30:23,791 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00054_2.16.840.1.113669.632.21.6395764.2003308549.35304757242257165315.dcm
+
+2022-07-13 11:30:23,798 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00055_2.16.840.1.113669.632.21.6395764.2003308549.37157302682367735315.dcm
+
+2022-07-13 11:30:23,806 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00056_2.16.840.1.113669.632.21.6395764.2003308549.37506812312307175316.dcm
+
+2022-07-13 11:30:23,814 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00057_2.16.840.1.113669.632.21.6395764.2003308549.37233405422226525317.dcm
+
+2022-07-13 11:30:23,822 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00058_2.16.840.1.113669.632.21.6395764.2003308549.37558098702337035317.dcm
+
+2022-07-13 11:30:23,829 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00059_2.16.840.1.113669.632.21.6395764.2003308549.37481657612448265318.dcm
+
+2022-07-13 11:30:23,836 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\49330713\00060_2.16.840.1.113669.632.21.6395764.2003308549.37167124322367695319.dcm
+
+2022-07-13 11:30:27,653 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\80713031\00001_2.16.840.1.113669.632.21.6395764.2003308549.36875082372146655114.dcm
+
+2022-07-13 11:30:27,658 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\80713031\00002_2.16.840.1.113669.632.21.6395764.2003308549.37409983332206775114.dcm
+
+2022-07-13 11:30:27,663 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\80713031\00003_2.16.840.1.113669.632.21.6395764.2003308549.35051024122176915115.dcm
+
+2022-07-13 11:30:27,668 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\80713031\00004_2.16.840.1.113669.632.21.6395764.2003308549.35064131672116325116.dcm
+
+2022-07-13 11:30:27,674 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\80713031\00005_2.16.840.1.113669.632.21.6395764.2003308549.36347939982176895117.dcm
+
+2022-07-13 11:30:27,681 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\80713031\00006_2.16.840.1.113669.632.21.6395764.2003308549.28509834402087221511.dcm
+
+2022-07-13 11:30:27,687 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\80713031\00007_2.16.840.1.113669.632.21.6395764.2003308549.37398170412357545118.dcm
+
+2022-07-13 11:30:27,699 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\80713031\00008_2.16.840.1.113669.632.21.6395764.2003308549.37493525602317705119.dcm
+
+2022-07-13 11:30:27,706 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\80713031\00009_2.16.840.1.113669.632.21.6395764.2003308549.37915591932096315120.dcm
+
+2022-07-13 11:30:27,713 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\80713031\00010_2.16.840.1.113669.632.21.6395764.2003308549.39414764082096285121.dcm
+
+2022-07-13 11:30:27,718 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\80713031\00011_2.16.840.1.113669.632.21.6395764.2003308549.40012922162247085121.dcm
+
+2022-07-13 11:30:27,725 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\80713031\00012_2.16.840.1.113669.632.21.6395764.2003308549.37891231632216855122.dcm
+
+2022-07-13 11:30:27,732 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\80713031\00013_2.16.840.1.113669.632.21.6395764.2003308549.40030657222146815123.dcm
+
+2022-07-13 11:30:27,737 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\80713031\00014_2.16.840.1.113669.632.21.6395764.2003308549.39194199172116375124.dcm
+
+2022-07-13 11:30:27,745 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\80713031\00015_2.16.840.1.113669.632.21.6395764.2003308549.39718194532317385124.dcm
+
+2022-07-13 11:30:27,751 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\80713031\00016_2.16.840.1.113669.632.21.6395764.2003308549.39687199642257015125.dcm
+
+2022-07-13 11:30:27,757 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\80713031\00017_2.16.840.1.113669.632.21.6395764.2003308549.39662651992347615126.dcm
+
+2022-07-13 11:30:27,764 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\80713031\00018_2.16.840.1.113669.632.21.6395764.2003308549.39211246222176865127.dcm
+
+2022-07-13 11:30:27,772 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\80713031\00019_2.16.840.1.113669.632.21.6395764.2003308549.40095105902327365127.dcm
+
+2022-07-13 11:30:27,780 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\T2DM5\61060391\80713031\00020_2.16.840.1.113669.632.21.6395764.2003308549.40060634412287235128.dcm
+
+2022-07-13 11:30:28,813 - curator - INFO - FileReader.copyValidSeriesAndUpdateStudyList()
+2022-07-13 11:30:28,813 - curator - INFO -     Copying valid series to C:\Users\jinse\Downloads\parse\dcm
+2022-07-13 11:30:30,292 - curator - INFO - FileReader.queryDirectory()
+2022-07-13 11:30:30,293 - curator - INFO -     Querying Directory for Dicom Files
+2022-07-13 11:30:30,293 - curator - INFO -     Searching C:\Users\jinse\Downloads\parse\dcm for dicom files
+2022-07-13 11:30:30,293 - curator - INFO -     Searching (at least) 2 folder level(s) deep
+2022-07-13 11:30:34,363 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10033_PERF_-_AIF_-_TEST_-_BH_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.28509834402087221511.dcm
+
+2022-07-13 11:30:34,368 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10033_PERF_-_AIF_-_TEST_-_BH_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.35051024122176915115.dcm
+
+2022-07-13 11:30:34,373 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10033_PERF_-_AIF_-_TEST_-_BH_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.35064131672116325116.dcm
+
+2022-07-13 11:30:34,379 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10033_PERF_-_AIF_-_TEST_-_BH_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.36347939982176895117.dcm
+
+2022-07-13 11:30:34,385 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10033_PERF_-_AIF_-_TEST_-_BH_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.36875082372146655114.dcm
+
+2022-07-13 11:30:34,391 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10033_PERF_-_AIF_-_TEST_-_BH_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.37398170412357545118.dcm
+
+2022-07-13 11:30:34,402 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10033_PERF_-_AIF_-_TEST_-_BH_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.37409983332206775114.dcm
+
+2022-07-13 11:30:34,414 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10033_PERF_-_AIF_-_TEST_-_BH_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.37493525602317705119.dcm
+
+2022-07-13 11:30:34,420 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10033_PERF_-_AIF_-_TEST_-_BH_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.37891231632216855122.dcm
+
+2022-07-13 11:30:34,426 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10033_PERF_-_AIF_-_TEST_-_BH_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.37915591932096315120.dcm
+
+2022-07-13 11:30:34,432 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10033_PERF_-_AIF_-_TEST_-_BH_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.39194199172116375124.dcm
+
+2022-07-13 11:30:34,439 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10033_PERF_-_AIF_-_TEST_-_BH_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.39211246222176865127.dcm
+
+2022-07-13 11:30:34,445 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10033_PERF_-_AIF_-_TEST_-_BH_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.39414764082096285121.dcm
+
+2022-07-13 11:30:34,451 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10033_PERF_-_AIF_-_TEST_-_BH_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.39662651992347615126.dcm
+
+2022-07-13 11:30:34,456 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10033_PERF_-_AIF_-_TEST_-_BH_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.39687199642257015125.dcm
+
+2022-07-13 11:30:34,462 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10033_PERF_-_AIF_-_TEST_-_BH_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.39718194532317385124.dcm
+
+2022-07-13 11:30:34,467 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10033_PERF_-_AIF_-_TEST_-_BH_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.40012922162247085121.dcm
+
+2022-07-13 11:30:34,473 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10033_PERF_-_AIF_-_TEST_-_BH_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.40030657222146815123.dcm
+
+2022-07-13 11:30:34,483 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10033_PERF_-_AIF_-_TEST_-_BH_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.40060634412287235128.dcm
+
+2022-07-13 11:30:34,490 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10033_PERF_-_AIF_-_TEST_-_BH_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.40095105902327365127.dcm
+
+2022-07-13 11:30:34,747 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.22972223662166185247.dcm
+
+2022-07-13 11:30:34,752 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.22972745222166315243.dcm
+
+2022-07-13 11:30:34,758 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.22983290692156085244.dcm
+
+2022-07-13 11:30:34,765 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.23098555812326975244.dcm
+
+2022-07-13 11:30:34,772 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.23143703721872611525.dcm
+
+2022-07-13 11:30:34,779 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.23485130082276485249.dcm
+
+2022-07-13 11:30:34,785 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.23571289522246935241.dcm
+
+2022-07-13 11:30:34,792 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.23601501882417535245.dcm
+
+2022-07-13 11:30:34,797 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.23611685452316915248.dcm
+
+2022-07-13 11:30:34,804 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.23634121372186505240.dcm
+
+2022-07-13 11:30:34,810 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.23913696592347695242.dcm
+
+2022-07-13 11:30:34,816 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.24114958232246885246.dcm
+
+2022-07-13 11:30:34,822 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.24132421902447885247.dcm
+
+2022-07-13 11:30:34,828 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.24596023462297535253.dcm
+
+2022-07-13 11:30:34,834 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.24617767762176705251.dcm
+
+2022-07-13 11:30:34,840 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.24630171182206715257.dcm
+
+2022-07-13 11:30:34,846 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.25772932492246955258.dcm
+
+2022-07-13 11:30:34,851 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.25800615682307065259.dcm
+
+2022-07-13 11:30:34,857 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.25815249272337125256.dcm
+
+2022-07-13 11:30:34,864 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.26003449082246605255.dcm
+
+2022-07-13 11:30:34,870 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.26124125852287515250.dcm
+
+2022-07-13 11:30:34,876 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.26314499372327245258.dcm
+
+2022-07-13 11:30:34,882 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.26431726032226975252.dcm
+
+2022-07-13 11:30:34,888 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.26630376922166535255.dcm
+
+2022-07-13 11:30:34,895 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.26808569892277235254.dcm
+
+2022-07-13 11:30:34,901 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.28739237002258191531.dcm
+
+2022-07-13 11:30:34,908 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.32661510962247195301.dcm
+
+2022-07-13 11:30:34,914 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.32692621702307305303.dcm
+
+2022-07-13 11:30:34,921 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.32710364092247195300.dcm
+
+2022-07-13 11:30:34,928 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.32879637292337475308.dcm
+
+2022-07-13 11:30:34,933 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.33632860122287575305.dcm
+
+2022-07-13 11:30:34,939 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.33824764292207005304.dcm
+
+2022-07-13 11:30:34,945 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.33844701442287075309.dcm
+
+2022-07-13 11:30:34,950 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.34292694062357735307.dcm
+
+2022-07-13 11:30:34,956 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.34547826392236785306.dcm
+
+2022-07-13 11:30:34,962 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.34705173242307205305.dcm
+
+2022-07-13 11:30:34,969 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.34706343132166675300.dcm
+
+2022-07-13 11:30:34,975 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.34723440432247195302.dcm
+
+2022-07-13 11:30:34,981 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.34808081382227215303.dcm
+
+2022-07-13 11:30:34,989 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.34830867852196865308.dcm
+
+2022-07-13 11:30:34,995 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.35304757242257165315.dcm
+
+2022-07-13 11:30:35,002 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.35552692902367625313.dcm
+
+2022-07-13 11:30:35,008 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.36853869872176675312.dcm
+
+2022-07-13 11:30:35,015 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.36857307442116185311.dcm
+
+2022-07-13 11:30:35,021 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.37157302682367735315.dcm
+
+2022-07-13 11:30:35,028 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.37167124322367695319.dcm
+
+2022-07-13 11:30:35,035 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.37188509732347455314.dcm
+
+2022-07-13 11:30:35,042 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.37233405422226525317.dcm
+
+2022-07-13 11:30:35,049 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.37481657612448265318.dcm
+
+2022-07-13 11:30:35,055 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.37506812312307175316.dcm
+
+2022-07-13 11:30:35,061 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.37514757852377715310.dcm
+
+2022-07-13 11:30:35,067 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.37558098702337035317.dcm
+
+2022-07-13 11:30:35,072 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.37577553852186615310.dcm
+
+2022-07-13 11:30:35,078 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.39402414632117661525.dcm
+
+2022-07-13 11:30:35,083 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.41869329442266975239.dcm
+
+2022-07-13 11:30:35,088 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.42089720522106861524.dcm
+
+2022-07-13 11:30:35,094 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.42515963832498415236.dcm
+
+2022-07-13 11:30:35,099 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.42760298252296775238.dcm
+
+2022-07-13 11:30:35,106 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.42859800942407915237.dcm
+
+2022-07-13 11:30:35,112 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10035_PERF_-_AIF_-_REST_USE_1_4_OF_CONTRAST_AIF\None_2.16.840.1.113669.632.21.6395764.2003308549.42883008642447995239.dcm
+
+2022-07-13 11:30:39,958 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.21911100062085510655.dcm
+
+2022-07-13 11:30:39,962 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.22078872222095530655.dcm
+
+2022-07-13 11:30:39,968 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.22917733022025390655.dcm
+
+2022-07-13 11:30:39,972 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.23085505182035410655.dcm
+
+2022-07-13 11:30:39,978 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.23253277342005350655.dcm
+
+2022-07-13 11:30:39,984 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.23421049502015370655.dcm
+
+2022-07-13 11:30:39,990 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.23588821662065470655.dcm
+
+2022-07-13 11:30:39,995 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.23756593822075490655.dcm
+
+2022-07-13 11:30:40,002 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.23924365982045430655.dcm
+
+2022-07-13 11:30:40,008 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.24092138142055450655.dcm
+
+2022-07-13 11:30:40,014 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.27279809182065470655.dcm
+
+2022-07-13 11:30:40,023 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.27447581342075490655.dcm
+
+2022-07-13 11:30:40,031 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.28286442142005350655.dcm
+
+2022-07-13 11:30:40,037 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.28454214302015370655.dcm
+
+2022-07-13 11:30:40,044 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.28789758621995330655.dcm
+
+2022-07-13 11:30:40,050 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.28957530782045430655.dcm
+
+2022-07-13 11:30:40,057 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.29125302942055450655.dcm
+
+2022-07-13 11:30:40,064 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.29293075102025390655.dcm
+
+2022-07-13 11:30:40,070 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.29460847262035410655.dcm
+
+2022-07-13 11:30:40,075 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.32648518302125590655.dcm
+
+2022-07-13 11:30:40,082 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.32816290462135610655.dcm
+
+2022-07-13 11:30:40,087 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.33655151262065470655.dcm
+
+2022-07-13 11:30:40,092 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.33822923422075490655.dcm
+
+2022-07-13 11:30:40,098 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.33990695582045430655.dcm
+
+2022-07-13 11:30:40,104 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.34158467742055450655.dcm
+
+2022-07-13 11:30:40,111 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.34326239902105550655.dcm
+
+2022-07-13 11:30:40,118 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.34494012062115570655.dcm
+
+2022-07-13 11:30:40,124 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.34661784222085510655.dcm
+
+2022-07-13 11:30:40,130 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.34829556382095530655.dcm
+
+2022-07-13 11:30:40,136 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.38017227422105550655.dcm
+
+2022-07-13 11:30:40,143 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.38184999582115570655.dcm
+
+2022-07-13 11:30:40,149 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.39023860382045430655.dcm
+
+2022-07-13 11:30:40,156 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.39191632542055450655.dcm
+
+2022-07-13 11:30:40,163 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.39359404702025390655.dcm
+
+2022-07-13 11:30:40,169 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.39527176862035410655.dcm
+
+2022-07-13 11:30:40,176 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.39694949022085510655.dcm
+
+2022-07-13 11:30:40,182 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.39862721182095530655.dcm
+
+2022-07-13 11:30:40,188 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.40030493342065470655.dcm
+
+2022-07-13 11:30:40,194 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.40198265502075490655.dcm
+
+2022-07-13 11:30:40,201 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.58049727021456306553.dcm
+
+2022-07-13 11:30:40,208 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.68116056620855106553.dcm
+
+2022-07-13 11:30:40,214 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.69793778220955306553.dcm
+
+2022-07-13 11:30:40,220 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.71471499820654706553.dcm
+
+2022-07-13 11:30:40,225 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.73149221420754906553.dcm
+
+2022-07-13 11:30:40,231 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.74826943021255906553.dcm
+
+2022-07-13 11:30:40,237 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.76504664621356106553.dcm
+
+2022-07-13 11:30:40,244 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.78182386221055506553.dcm
+
+2022-07-13 11:30:40,251 - curator - ERROR - Invalid acquisitionNumber in file: C:\Users\jinse\Downloads\parse\dcm\10099_PhoenixZIPReport\None_2.16.840.1.113669.632.21.6395764.2003308549.79860107821155706553.dcm
+
+2022-07-13 11:30:40,862 - curator - INFO - writeStudyListToCSV()
+2022-07-13 11:30:40,865 - curator - INFO -     csv file written: csv_file6.csv
+2022-07-13 11:31:32,490 - curator - INFO - Nifti Mode
+2022-07-13 11:31:32,490 - curator - INFO - niftiEngine.init()
+2022-07-13 11:31:32,490 - curator - INFO - niftiEngine.convertCSVToNifti
+2022-07-13 11:31:32,497 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:32,584 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:32,629 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:32,675 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:32,715 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:32,757 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:32,800 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:32,847 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:32,893 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:32,954 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:33,014 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:33,075 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:33,139 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:33,175 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:33,213 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:33,247 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:33,286 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:33,328 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:33,370 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:33,419 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:33,459 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:33,497 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:33,538 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:33,578 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:33,618 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:33,658 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:33,695 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:33,735 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:33,774 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:33,815 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:33,859 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:33,900 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:33,940 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:33,979 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:34,017 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:34,056 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:34,103 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:34,145 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:34,185 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:34,222 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:34,258 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:34,470 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:34,517 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:34,557 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:34,597 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:34,636 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:34,678 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:34,718 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:34,758 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:34,798 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:34,836 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:34,877 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:34,919 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:34,961 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:35,007 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:35,051 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:35,089 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:35,130 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:35,168 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:35,204 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:35,240 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:35,282 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:35,323 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:35,366 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:35,409 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:35,453 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:35,496 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:35,542 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:35,585 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:35,628 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:35,672 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:35,716 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:35,766 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:35,813 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:35,855 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:35,897 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:35,941 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:35,986 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:36,030 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:36,072 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:36,113 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:36,178 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:36,241 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:36,308 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:36,373 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:36,437 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:36,501 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:36,567 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:36,641 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:36,706 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:36,772 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:36,836 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:36,901 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:36,966 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:37,032 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:37,096 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:37,161 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:37,229 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:37,294 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:37,358 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:37,424 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:37,484 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:37,543 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:37,612 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:37,668 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:37,724 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:37,778 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:37,834 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:37,888 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:37,945 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:38,001 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:38,056 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:38,113 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:38,167 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:38,223 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:38,279 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:38,340 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:38,395 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:38,449 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:38,511 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:38,566 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:38,621 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:38,676 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:38,731 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:38,788 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:38,841 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:38,896 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:38,945 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:38,992 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:39,039 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:39,084 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:39,131 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:39,178 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:39,225 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:39,274 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:39,320 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:39,375 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:39,423 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:39,468 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:39,514 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:39,562 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:39,608 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:39,657 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:39,703 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:39,752 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:39,800 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:39,847 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:39,895 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:39,946 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:39,997 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:40,044 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:40,091 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:40,145 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:40,196 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:40,245 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:40,295 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:40,343 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:40,388 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:40,437 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:40,485 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:40,533 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:40,647 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:40,758 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:40,867 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:40,973 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:41,084 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:41,197 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:41,308 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:41,426 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:41,532 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:41,649 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:41,766 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:41,876 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:41,985 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:42,091 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:42,202 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:42,315 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:42,427 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:42,542 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:42,652 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:42,764 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:42,884 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:42,994 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:43,104 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:43,209 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:43,317 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:43,428 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:43,518 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:43,609 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:43,698 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:43,792 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:43,885 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:43,981 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:44,074 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:44,167 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:44,270 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:44,360 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:44,450 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:44,538 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:44,628 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:44,721 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:44,812 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:44,901 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:44,990 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:45,077 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:45,167 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:45,257 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:45,348 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:45,437 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:45,527 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:45,628 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:45,718 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:45,817 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:45,910 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:46,002 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:46,091 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:46,179 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:46,267 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:46,359 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:46,450 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:46,543 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:46,653 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:46,758 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:46,866 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:46,985 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:47,091 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:47,195 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:47,303 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:47,410 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:47,520 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:47,629 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:47,739 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:47,847 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:47,960 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:48,070 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:48,187 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:48,299 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:48,416 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:48,529 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:48,650 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:48,762 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:48,872 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:48,980 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:49,086 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:49,203 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:49,314 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:49,422 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:49,514 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:49,607 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:49,701 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:49,795 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:49,890 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:49,983 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:50,077 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:50,181 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:50,272 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:50,362 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:50,451 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:50,541 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:50,632 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:50,726 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:50,819 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:50,910 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:50,999 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:51,094 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:51,187 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:51,282 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:51,379 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:51,472 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:51,567 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:51,669 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:51,759 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:51,850 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:51,942 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:52,038 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:52,127 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:52,214 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:52,304 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:52,393 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:52,484 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:52,573 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:52,685 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:52,793 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:52,903 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:53,016 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:53,135 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:53,245 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:53,355 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:53,466 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:53,577 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:53,689 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:53,798 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:53,918 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:54,027 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:54,141 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:54,253 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:54,365 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:54,475 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:54,583 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:54,716 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:54,827 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:54,936 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:55,045 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:55,160 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:55,272 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:55,408 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:55,528 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:55,629 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:55,730 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:55,824 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:55,917 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:56,012 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:56,107 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:56,199 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:56,292 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:56,392 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:56,482 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:56,582 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:56,673 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:56,762 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:56,855 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:56,946 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:57,035 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:57,123 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:57,211 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:57,302 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:57,391 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:57,484 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:57,574 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:57,673 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:57,765 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:57,860 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:57,948 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:58,036 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:58,124 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:58,210 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:58,299 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:58,388 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:58,477 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:58,566 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:58,656 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:58,697 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:58,730 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:58,785 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:58,832 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:58,876 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:58,914 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:58,955 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:58,995 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:59,035 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:59,075 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:59,112 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:59,150 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:59,189 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:59,231 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:59,271 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:59,307 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:59,343 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:59,379 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:59,436 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:59,500 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:59,540 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:59,581 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:59,618 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:59,658 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:59,694 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:59,732 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:59,769 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:59,809 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:59,851 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:59,890 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:59,926 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:59,962 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:31:59,998 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:00,055 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:00,110 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:00,150 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:00,191 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:00,237 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:00,281 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:00,317 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:00,354 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:00,390 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:00,431 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:00,471 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:00,513 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:00,551 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:00,588 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:00,624 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:00,681 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:00,739 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:00,784 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:00,823 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:00,861 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:00,893 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:00,927 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:00,965 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:01,002 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:01,033 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:01,063 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:01,103 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:01,145 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:01,186 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:01,227 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:01,269 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:01,309 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:01,351 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:01,392 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:01,434 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:01,477 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:01,518 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:01,561 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:01,604 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:01,646 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:01,688 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:01,732 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:01,774 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:01,817 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:01,865 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:01,909 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:01,950 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:01,994 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:02,038 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:02,080 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:02,122 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:02,164 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:02,204 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:02,245 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:02,287 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:02,327 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:02,369 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:02,411 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:02,453 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:02,495 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:02,540 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:02,582 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:02,623 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:02,665 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:02,706 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:02,747 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:02,791 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:02,836 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:02,882 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:02,924 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:02,966 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:03,008 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:03,050 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:03,091 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:03,132 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:03,159 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:03,197 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:03,237 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:03,276 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:03,312 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:03,346 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:03,382 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:03,421 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:03,460 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:03,500 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:03,543 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:03,580 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:03,617 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 11:32:03,671 - curator - INFO - Writing C:\Users\jinse\Downloads\parse\T2DM5
+2022-07-13 13:51:26,929 - curator - INFO - Classify Mode
+2022-07-13 13:51:26,929 - curator - INFO - classifier.classifyNifti
+2022-07-13 13:51:26,930 - curator - INFO -       generating predictions for 0 images
+2022-07-13 13:53:42,197 - curator - INFO - Classify Mode
+2022-07-13 13:53:42,197 - curator - INFO - classifier.classifyNifti
+2022-07-13 13:53:42,228 - curator - INFO -       generating predictions for 3 images
+2022-07-13 13:54:48,791 - curator - INFO - Classify Mode
+2022-07-13 13:54:48,791 - curator - INFO - classifier.classifyNifti
+2022-07-13 13:54:48,806 - curator - INFO -       generating predictions for 3 images
+2022-07-13 13:55:48,944 - curator - INFO - Classify Mode
+2022-07-13 13:55:48,944 - curator - INFO - classifier.classifyNifti
+2022-07-13 13:55:48,955 - curator - INFO -       generating predictions for 3 images
+2022-07-13 13:57:11,977 - curator - INFO - Classify Mode
+2022-07-13 13:57:11,978 - curator - INFO - classifier.classifyNifti
+2022-07-13 13:57:11,990 - curator - INFO -       generating predictions for 3 images
+2022-07-13 13:59:28,312 - curator - INFO - Classify Mode
+2022-07-13 13:59:28,312 - curator - INFO - classifier.classifyNifti
+2022-07-13 13:59:28,326 - curator - INFO -       generating predictions for 3 images
+2022-07-13 13:59:40,336 - curator - INFO - Classify Mode
+2022-07-13 13:59:40,337 - curator - INFO - classifier.classifyNifti
+2022-07-13 13:59:40,347 - curator - INFO -       generating predictions for 3 images
+2022-07-13 13:59:53,808 - curator - INFO - Classify Mode
+2022-07-13 13:59:53,808 - curator - INFO - classifier.classifyNifti
+2022-07-13 13:59:53,819 - curator - INFO -       generating predictions for 3 images
+2022-07-13 14:00:41,354 - curator - INFO - Classify Mode
+2022-07-13 14:00:41,354 - curator - INFO - classifier.classifyNifti
+2022-07-13 14:00:41,366 - curator - INFO -       generating predictions for 3 images
+2022-07-13 14:01:32,481 - curator - INFO - Classify Mode
+2022-07-13 14:01:32,481 - curator - INFO - classifier.classifyNifti
+2022-07-13 14:01:33,227 - curator - INFO -       generating predictions for 3 images
+2022-07-13 14:02:08,607 - curator - INFO - Classify Mode
+2022-07-13 14:02:08,608 - curator - INFO - classifier.classifyNifti
+2022-07-13 14:02:09,051 - curator - INFO -       generating predictions for 3 images
+2022-07-13 14:05:24,097 - curator - INFO - Classify Mode
+2022-07-13 14:05:24,097 - curator - INFO - classifier.classifyNifti
+2022-07-13 14:05:24,110 - curator - INFO -       generating predictions for 3 images
+2022-07-13 14:06:36,844 - curator - INFO - Classify Mode
+2022-07-13 14:06:36,845 - curator - INFO - classifier.classifyNifti
+2022-07-13 14:06:36,856 - curator - INFO -       generating predictions for 3 images
+2022-07-13 14:09:48,200 - curator - INFO - Classify Mode
+2022-07-13 14:09:48,200 - curator - INFO - classifier.classifyNifti
+2022-07-13 14:09:54,046 - curator - INFO -       generating predictions for 280 images
+2022-07-13 15:01:03,413 - curator - INFO - Classify Mode
+2022-07-13 15:01:03,414 - curator - INFO - classifier.classifyNifti
+2022-07-13 15:01:07,310 - curator - INFO -       generating predictions for 280 images
