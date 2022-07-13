@@ -73,9 +73,8 @@ class niftiEngine():
         return processed_tag_dict
 
 
-    def process_dcm(self,input_dir, output_dir,
+    def process_dcm(self, input_dir, output_dir,
                     include_tags=[], inject_tags={}, write_slice_jsons=False):
-        
 
         os.makedirs(output_dir, exist_ok=True)
         # output filenames

@@ -1,0 +1,134 @@
+2022-07-12 13:59:38,792 - curator - INFO - Nifti Mode
+2022-07-12 13:59:38,792 - curator - INFO - niftiEngine.init()
+2022-07-12 13:59:38,792 - curator - INFO - niftiEngine.convertCSVToNifti
+2022-07-12 13:59:38,797 - curator - INFO - Writing C:/Users/jinse/Downloads/parse\nan
+2022-07-12 14:09:33,478 - curator - INFO - Nifti Mode
+2022-07-12 14:09:33,479 - curator - INFO - niftiEngine.init()
+2022-07-12 14:09:33,479 - curator - INFO - niftiEngine.convertCSVToNifti
+2022-07-12 14:09:33,483 - curator - INFO - Writing C:/Users/jinse/Downloads/parse\nan
+2022-07-12 14:12:50,701 - curator - INFO - Nifti Mode
+2022-07-12 14:12:50,703 - curator - INFO - niftiEngine.init()
+2022-07-12 14:12:50,703 - curator - INFO - niftiEngine.convertCSVToNifti
+2022-07-12 14:12:50,708 - curator - INFO - Writing C:/Users/jinse/Downloads/parse\nan
+2022-07-12 14:13:46,786 - curator - INFO - Nifti Mode
+2022-07-12 14:13:46,787 - curator - INFO - niftiEngine.init()
+2022-07-12 14:13:46,787 - curator - INFO - niftiEngine.convertCSVToNifti
+2022-07-12 14:13:46,791 - curator - INFO - Writing C:/Users/jinse/Downloads/parse\nan
+2022-07-12 14:46:51,042 - curator - INFO - Nifti Mode
+2022-07-12 14:46:51,042 - curator - INFO - niftiEngine.init()
+2022-07-12 14:46:51,043 - curator - INFO - niftiEngine.convertCSVToNifti
+2022-07-12 14:46:51,047 - curator - INFO - Writing C:/Users/jinse/Downloads/parse/nan
+2022-07-12 14:47:49,259 - curator - INFO - Nifti Mode
+2022-07-12 14:47:49,259 - curator - INFO - niftiEngine.init()
+2022-07-12 14:47:49,259 - curator - INFO - niftiEngine.convertCSVToNifti
+2022-07-12 14:47:49,263 - curator - INFO - Writing C:/Users/jinse/Downloads/parse/nan
+2022-07-12 14:58:38,713 - curator - INFO - Parsing Mode
+2022-07-12 14:58:38,713 - curator - INFO - imageReaderWriter.init()
+2022-07-12 14:58:38,713 - curator - INFO - FileReader.queryDirectory()
+2022-07-12 14:58:38,713 - curator - INFO -     Querying Directory for Dicom Files
+2022-07-12 14:58:38,713 - curator - INFO -     Searching C:/Users/jinse/Downloads/T2DM5/61060391/05789980 for dicom files
+2022-07-12 14:58:38,714 - curator - INFO -     Searching (at least) 2 folder level(s) deep
+2022-07-12 14:58:38,752 - curator - INFO - FileReader.copyValidSeriesAndUpdateStudyList()
+2022-07-12 14:58:38,752 - curator - INFO -     Copying valid series to C:/Users/jinse/Downloads/parse\dcm
+2022-07-12 14:58:38,774 - curator - INFO - FileReader.queryDirectory()
+2022-07-12 14:58:38,774 - curator - INFO -     Querying Directory for Dicom Files
+2022-07-12 14:58:38,774 - curator - INFO -     Searching C:/Users/jinse/Downloads/parse\dcm for dicom files
+2022-07-12 14:58:38,774 - curator - INFO -     Searching (at least) 2 folder level(s) deep
+2022-07-12 14:58:38,960 - curator - INFO - writeStudyListToCSV()
+2022-07-12 14:58:38,961 - curator - INFO -     csv file written: csv_file3.csv
+2022-07-12 15:00:00,931 - curator - INFO - Nifti Mode
+2022-07-12 15:00:00,932 - curator - INFO - niftiEngine.init()
+2022-07-12 15:00:00,932 - curator - INFO - niftiEngine.convertCSVToNifti
+2022-07-12 15:00:00,936 - curator - INFO - Writing C:/Users/jinse/Downloads/parse/nan
+2022-07-12 15:00:00,994 - curator - INFO - Writing C:/Users/jinse/Downloads/parse/nan
+2022-07-12 15:00:01,031 - curator - INFO - Writing C:/Users/jinse/Downloads/parse/nan
+2022-07-12 18:29:38,505 - curator - INFO - Classify Mode
+2022-07-12 18:29:38,505 - curator - INFO - classifier.classifyNifti
+2022-07-12 18:32:40,617 - curator - INFO - Classify Mode
+2022-07-12 18:32:40,618 - curator - INFO - classifier.classifyNifti
+2022-07-12 18:32:40,621 - curator - INFO -       generating predictions for 0 images
+2022-07-12 18:36:52,539 - curator - INFO - Classify Mode
+2022-07-12 18:36:52,539 - curator - INFO - classifier.classifyNifti
+2022-07-12 18:36:52,560 - curator - INFO -       generating predictions for 3 images
+2022-07-12 18:40:39,707 - curator - INFO - Classify Mode
+2022-07-12 18:40:39,707 - curator - INFO - classifier.classifyNifti
+2022-07-12 18:41:02,677 - curator - INFO - Classify Mode
+2022-07-12 18:41:02,677 - curator - INFO - classifier.classifyNifti
+2022-07-12 18:41:20,032 - curator - INFO -       generating predictions for 3 images
+2022-07-12 18:43:14,513 - curator - INFO - Classify Mode
+2022-07-12 18:43:14,514 - curator - INFO - classifier.classifyNifti
+2022-07-12 18:44:06,107 - curator - INFO - Classify Mode
+2022-07-12 18:44:06,108 - curator - INFO - classifier.classifyNifti
+2022-07-12 18:44:06,573 - curator - INFO -       generating predictions for 3 images
+2022-07-12 18:44:55,478 - curator - INFO - Classify Mode
+2022-07-12 18:44:55,479 - curator - INFO - classifier.classifyNifti
+2022-07-12 18:45:54,432 - curator - INFO - Classify Mode
+2022-07-12 18:45:54,432 - curator - INFO - classifier.classifyNifti
+2022-07-12 18:45:54,891 - curator - INFO -       generating predictions for 3 images
+2022-07-12 18:56:32,947 - curator - INFO - Classify Mode
+2022-07-12 18:56:32,948 - curator - INFO - classifier.classifyNifti
+2022-07-12 18:56:57,344 - curator - INFO - Classify Mode
+2022-07-12 18:56:57,345 - curator - INFO - classifier.classifyNifti
+2022-07-12 18:57:48,939 - curator - INFO - Classify Mode
+2022-07-12 18:57:48,940 - curator - INFO - classifier.classifyNifti
+2022-07-12 18:57:49,427 - curator - INFO -       generating predictions for 3 images
+2022-07-12 19:03:16,287 - curator - INFO - Classify Mode
+2022-07-12 19:03:16,288 - curator - INFO - classifier.classifyNifti
+2022-07-12 19:03:16,764 - curator - INFO -       generating predictions for 3 images
+2022-07-12 19:03:51,296 - curator - INFO - Classify Mode
+2022-07-12 19:03:51,297 - curator - INFO - classifier.classifyNifti
+2022-07-12 19:03:51,773 - curator - INFO -       generating predictions for 3 images
+2022-07-12 19:05:26,952 - curator - INFO - Classify Mode
+2022-07-12 19:05:26,953 - curator - INFO - classifier.classifyNifti
+2022-07-12 19:05:58,656 - curator - INFO - Classify Mode
+2022-07-12 19:05:58,656 - curator - INFO - classifier.classifyNifti
+2022-07-12 19:05:59,129 - curator - INFO -       generating predictions for 3 images
+2022-07-12 19:09:44,973 - curator - INFO - Classify Mode
+2022-07-12 19:09:44,973 - curator - INFO - classifier.classifyNifti
+2022-07-12 19:09:45,438 - curator - INFO -       generating predictions for 3 images
+2022-07-12 19:36:33,636 - curator - INFO - Nifti Mode
+2022-07-12 19:36:33,636 - curator - INFO - niftiEngine.init()
+2022-07-12 19:36:33,636 - curator - INFO - niftiEngine.convertCSVToNifti
+2022-07-12 19:36:33,641 - curator - INFO - Writing C:/Users/jinse/parse/nan
+2022-07-12 19:36:33,711 - curator - INFO - Writing C:/Users/jinse/parse/nan
+2022-07-12 19:36:33,754 - curator - INFO - Writing C:/Users/jinse/parse/nan
+2022-07-12 19:37:20,262 - curator - INFO - Nifti Mode
+2022-07-12 19:37:20,263 - curator - INFO - niftiEngine.init()
+2022-07-12 19:37:20,263 - curator - INFO - niftiEngine.convertCSVToNifti
+2022-07-12 19:37:20,268 - curator - INFO - Writing C:/Users/jinse/parse/nan
+2022-07-12 19:37:20,332 - curator - INFO - Writing C:/Users/jinse/parse/nan
+2022-07-12 19:37:20,376 - curator - INFO - Writing C:/Users/jinse/parse/nan
+2022-07-12 19:38:31,930 - curator - INFO - Nifti Mode
+2022-07-12 19:38:31,930 - curator - INFO - niftiEngine.init()
+2022-07-12 19:38:31,930 - curator - INFO - niftiEngine.convertCSVToNifti
+2022-07-12 19:38:31,935 - curator - INFO - Writing C:/Users/jinse/Downloads/parse/nan
+2022-07-12 19:38:32,004 - curator - INFO - Writing C:/Users/jinse/Downloads/parse/nan
+2022-07-12 19:38:32,052 - curator - INFO - Writing C:/Users/jinse/Downloads/parse/nan
+2022-07-12 19:44:20,181 - curator - INFO - Classify Mode
+2022-07-12 19:44:20,181 - curator - INFO - classifier.classifyNifti
+2022-07-12 19:44:20,197 - curator - INFO -       generating predictions for 3 images
+2022-07-12 19:46:59,536 - curator - INFO - Classify Mode
+2022-07-12 19:46:59,537 - curator - INFO - classifier.classifyNifti
+2022-07-12 19:46:59,554 - curator - INFO -       generating predictions for 3 images
+2022-07-12 19:48:23,938 - curator - INFO - Classify Mode
+2022-07-12 19:48:23,939 - curator - INFO - classifier.classifyNifti
+2022-07-12 19:48:23,955 - curator - INFO -       generating predictions for 3 images
+2022-07-12 19:49:50,101 - curator - INFO - Classify Mode
+2022-07-12 19:49:50,102 - curator - INFO - classifier.classifyNifti
+2022-07-12 19:49:50,120 - curator - INFO -       generating predictions for 3 images
+2022-07-12 20:07:20,525 - curator - INFO - Parsing Mode
+2022-07-12 20:07:20,525 - curator - ERROR -     Check that --input_dir, --output_dir, --csv_file are defined
+2022-07-12 20:07:55,694 - curator - INFO - Parsing Mode
+2022-07-12 20:07:55,695 - curator - INFO - imageReaderWriter.init()
+2022-07-12 20:07:55,695 - curator - INFO - FileReader.queryDirectory()
+2022-07-12 20:07:55,695 - curator - INFO -     Querying Directory for Dicom Files
+2022-07-12 20:07:55,695 - curator - INFO -     Searching C:\Users\jinse\Downloads\T2DM5\61060391\44901525 for dicom files
+2022-07-12 20:07:55,696 - curator - INFO -     Searching (at least) 2 folder level(s) deep
+2022-07-12 20:07:55,711 - curator - INFO - FileReader.copyValidSeriesAndUpdateStudyList()
+2022-07-12 20:07:55,712 - curator - INFO -     Copying valid series to C:\Users\jinse\Downloads\parse\dcm
+2022-07-12 20:07:55,720 - curator - INFO - FileReader.queryDirectory()
+2022-07-12 20:07:55,720 - curator - INFO -     Querying Directory for Dicom Files
+2022-07-12 20:07:55,720 - curator - INFO -     Searching C:\Users\jinse\Downloads\parse\dcm for dicom files
+2022-07-12 20:07:55,720 - curator - INFO -     Searching (at least) 2 folder level(s) deep
+2022-07-12 20:07:55,810 - curator - INFO - writeStudyListToCSV()
+2022-07-12 20:07:55,811 - curator - INFO -     csv file written: csv_file5.csv

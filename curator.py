@@ -8,6 +8,7 @@ import logging
 # custom modules
 import imageReaderWriter
 import niftiEngine
+import classifier
 
 def initLogger(name,logfile):
     # Create debugging information (logger)
@@ -31,7 +32,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
         description="Curator - Create databases of imaging data for manual curation")
-    parser.add_argument('curator_mode', choices=['parse', 'nifti', 'train','inference'])
+    parser.add_argument('curator_mode', choices=['parse', 'nifti', 'train','classify'])
     parser.add_argument("--input_dir", type=str, help="Input directory with dicom images to be curated")
     parser.add_argument("--output_dir",type=str,help="Output directory with curated files")
     parser.add_argument("--csv_file",type=str,help="csv file with data to curate")
@@ -83,3 +84,17 @@ if __name__ == "__main__":
         # Given a csv file with 
         ne.writeCSVToNifti(args.csv_file,args.output_dir,args.include_tags_txt)
         sys.exit()
+
+    # Classify mode
+    # use pre-trained model to generate predictions about input image dataset
+    if(args.curator_mode=="classify"):
+        # A valid csv file has to be given as an input
+        logger.info("Classify Mode")
+        
+        if args.csv_file is None:
+            logger.error("    Check that --csv_file is defined")
+            sys.exit()
+        
+        classifier.classifyNifti(args.csv_file)
+        sys.exit()
+    

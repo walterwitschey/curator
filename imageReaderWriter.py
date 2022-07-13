@@ -10,6 +10,9 @@ logger=logging.getLogger("curator")
 # pydicom
 import pydicom
 
+# dicom2nifti
+import dicom2nifti
+
 # custom modules
 from study import Study, Series, Image
 
