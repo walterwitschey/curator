@@ -176,6 +176,7 @@ class imageReaderWriter():
             newSeries=Series(StudyInstanceUID,SeriesInstanceUID,str(acquisitionNumber))
             newSeries.setDcmDirectory(os.path.dirname(filename))
             newSeries.setPatientName(patientName)
+            newSeries.accessionNumber=accessionNumber
             if(self.validateSeries(meta)):
                 newSeries.isValidSeries=True
                 seriesProcessType=self.getSeriesProcessType(meta)
