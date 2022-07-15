@@ -1505,3 +1505,39 @@
 2022-07-13 16:02:40,455 - curator - INFO - Classify Mode
 2022-07-13 16:02:40,455 - curator - INFO - classifier.classifyNifti
 2022-07-13 16:02:43,473 - curator - INFO -       generating predictions for 280 images
+2022-07-14 18:07:17,286 - curator - INFO - Classify Mode
+2022-07-14 18:07:17,286 - curator - INFO - classifier.classifyNifti
+2022-07-14 18:07:22,707 - curator - INFO -       generating predictions for 280 images
+2022-07-14 18:09:38,078 - curator - INFO - Classify Mode
+2022-07-14 18:09:38,078 - curator - INFO - classifier.classifyNifti
+2022-07-14 18:09:41,187 - curator - INFO -       generating predictions for 280 images
+2022-07-14 18:30:59,915 - curator - INFO - Classify Mode
+2022-07-14 18:30:59,916 - curator - INFO - classifier.classifyNifti
+2022-07-14 18:31:02,734 - curator - INFO -       generating predictions for 280 images
+2022-07-14 18:31:30,986 - curator - INFO - Classify Mode
+2022-07-14 18:31:30,986 - curator - INFO - classifier.classifyNifti
+2022-07-14 18:31:34,089 - curator - INFO -       generating predictions for 280 images
+2022-07-14 18:36:53,697 - curator - INFO - Classify Mode
+2022-07-14 18:36:53,697 - curator - INFO - classifier.classifyNifti
+2022-07-14 18:36:56,822 - curator - INFO -       generating predictions for 280 images
+2022-07-14 18:48:48,262 - curator - INFO - Classify Mode
+2022-07-14 18:48:48,262 - curator - INFO - classifier.classifyNifti
+2022-07-14 18:48:55,742 - curator - INFO -       generating predictions for 511 images
+2022-07-14 19:05:31,139 - curator - INFO - Classify Mode
+2022-07-14 19:05:31,139 - curator - INFO - classifier.classifyNifti
+2022-07-14 19:05:35,152 - curator - INFO -       generating predictions for 511 images
+2022-07-14 19:06:30,820 - curator - INFO - Classify Mode
+2022-07-14 19:06:30,820 - curator - INFO - classifier.classifyNifti
+2022-07-14 19:06:33,988 - curator - INFO -       generating predictions for 280 images
+2022-07-14 19:08:54,648 - curator - INFO - Classify Mode
+2022-07-14 19:08:54,648 - curator - INFO - classifier.classifyNifti
+2022-07-14 19:09:00,357 - curator - INFO -       generating predictions for 244 images
+2022-07-14 19:11:51,210 - curator - INFO - Classify Mode
+2022-07-14 19:11:51,211 - curator - INFO - classifier.classifyNifti
+2022-07-14 19:11:53,422 - curator - INFO -       generating predictions for 181 images
+2022-07-14 19:20:01,553 - curator - INFO - Classify Mode
+2022-07-14 19:20:01,553 - curator - INFO - classifier.classifyNifti
+2022-07-14 19:20:04,374 - curator - INFO -       generating predictions for 153 images
+2022-07-14 19:36:22,333 - curator - INFO - Classify Mode
+2022-07-14 19:36:22,333 - curator - INFO - classifier.classifyNifti
+2022-07-14 19:36:23,642 - curator - INFO -       generating predictions for 153 images

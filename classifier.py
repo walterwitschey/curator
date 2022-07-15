@@ -38,18 +38,24 @@ def classifyNifti(input_dir):
         return
 
     img_array = []
+    phase_counts = []
+
     for imgfile, folderpath in tqdm(directory):
         try:
             img = nb.load(imgfile).get_fdata()
         except:
             logging.warning('      could not find nifti file with path : %s',imgfile)
         else:
+            if len(img.shape) == 4:
+                phase_counts.append(img.shape[3])
+            else:
+                phase_counts.append(-1)
             img_array.append(preprocess_image(img, imgfile))
     img_array = np.array(img_array)
 
     # generate predictions
     logger.info('      generating predictions for %d images', img_array.shape[0])
-    orientation, contrast = generate_predictions(img_array)
+    orientation, contrast, cine_probability = generate_predictions(img_array)
 
     # === debugging purposes only ===
     #save_images(img_array, os.path.join(os.path.dirname(os.path.realpath(__file__)), 'images'), orientation, contrast)
@@ -59,22 +65,33 @@ def classifyNifti(input_dir):
     initial = directory[0][1]
     for num in range(len(directory)):
         if initial == directory[num][1]:
-            chunk.append(directory[num] + (orientation_names[orientation[num]], contrast_names[contrast[num]]))
+            chunk.append(directory[num] + (orientation_names[orientation[num]], contrast_names[contrast[num]], cine_probability[num]))
         else:
             parsedirectory.append(chunk)
             chunk = []
-            chunk.append(directory[num] + (orientation_names[orientation[num]], contrast_names[contrast[num]]))
+            chunk.append(directory[num] + (orientation_names[orientation[num]], contrast_names[contrast[num], cine_probability[num]]))
             initial = directory[num][1]
     parsedirectory.append(chunk)
 
     for study in parsedirectory:
         with open(os.path.join(study[0][1],'predictions.csv'),"w", newline='') as f:
             writer = csv.writer(f)
-            writer.writerow(['File Name', 'Orientation', 'Contrast'])
+            writer.writerow(['File Name', 'Orientation', 'Contrast', 'Cine_Probability'])
 
             for image in study:
                 filename = image[0][len(image[1]) + 1:]
-                writer.writerow([filename,image[2],image[3]])
+                writer.writerow([filename,image[2],image[3], image[4]])
+
+        # a separate collection only for sax cine images
+        with open(os.path.join(study[0][1],'sax_cine_list.csv'),"w", newline='') as f:
+            writer = csv.writer(f)
+            writer.writerow(['File Name', 'Orientation', 'Contrast', 'Cine_Probability'])
+
+            # add images only if probability is high, has 30 phases, and predicted as SAX CINE
+            for i, image in enumerate(study):
+                if cine_probability[i] >= 0.9 and phase_counts[i] >= 20 and image[2] == 'SAX' and image[3] == 'Cine':
+                    filename = image[0][len(image[1]) + 1:]
+                    writer.writerow([filename, image[2], image[3], image[4]])
 
 def preprocess_image(img, path):
 
@@ -107,13 +124,16 @@ def generate_predictions(img_array):
     # generate predictions
     orientations = np.argmax(predict_orientation.predict(img_array), axis=1)
     contrasts = np.argmax(predict_contrast.predict(img_array), axis=1)
+
+    # cache and return probabilities for cine
+    cine_probability = [pred[0] for pred in predict_contrast.predict(img_array)]
     
     # print results (debugging only)
     #for i in range(orientations.shape[0]):
         #print('orientation: %s', orientation_names[orientations[i]])
         #print('contrast: %s', contrast_names[contrasts[i]])
 
-    return (orientations, contrasts)
+    return (orientations, contrasts, cine_probability)
 
 # save mean slice images to local path (debugging purposes only)
 def save_images(image_array, file_path, orientation, contrast):
