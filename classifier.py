@@ -39,22 +39,30 @@ def classifyNifti(input_dir):
 
     img_array = []
     phase_counts = []
-
+    fetched_directory = []
+    errors = 0
     for imgfile, folderpath in tqdm(directory):
         try:
             img = nb.load(imgfile).get_fdata()
-        except:
-            logging.warning('      could not find nifti file with path : %s',imgfile)
+        except Exception as e:
+            # print(e)
+            logging.warning('      nibabel could not load nifti file with path : %s',imgfile)
+            errors += 1
         else:
             if len(img.shape) == 4:
                 phase_counts.append(img.shape[3])
             else:
                 phase_counts.append(-1)
             img_array.append(preprocess_image(img, imgfile))
+            fetched_directory.append((imgfile, folderpath))
     img_array = np.array(img_array)
 
+    # notify the user if some images were omitted from image array
+    if errors > 0:
+        logger.info('       failed loading {} images.'.format(errors))
+
     # generate predictions
-    logger.info('      generating predictions for %d images', img_array.shape[0])
+    logger.info('       generating predictions for %d images', img_array.shape[0])
     orientation, contrast, cine_probability = generate_predictions(img_array)
 
     # === debugging purposes only ===
@@ -62,15 +70,15 @@ def classifyNifti(input_dir):
 
     # iterate through directory go generate separate csv file for each study
     parsedirectory, chunk = ([] for i in range(2))
-    initial = directory[0][1]
-    for num in range(len(directory)):
-        if initial == directory[num][1]:
-            chunk.append(directory[num] + (orientation_names[orientation[num]], contrast_names[contrast[num]], cine_probability[num]))
+    initial = fetched_directory[0][1]
+    for num in range(len(fetched_directory)):
+        if initial == fetched_directory[num][1]:
+            chunk.append(fetched_directory[num] + (orientation_names[orientation[num]], contrast_names[contrast[num]], cine_probability[num]))
         else:
             parsedirectory.append(chunk)
             chunk = []
-            chunk.append(directory[num] + (orientation_names[orientation[num]], contrast_names[contrast[num], cine_probability[num]]))
-            initial = directory[num][1]
+            chunk.append(fetched_directory[num] + (orientation_names[orientation[num]], contrast_names[contrast[num]], cine_probability[num]))
+            initial = fetched_directory[num][1]
     parsedirectory.append(chunk)
 
     for study in parsedirectory:
@@ -102,7 +110,7 @@ def preprocess_image(img, path):
         img = img.mean(axis=3)
         img = img[:,:,0]
     else:
-        logging.warning('      image is out of dimension: %s',path)
+        logging.warning('       image is out of dimension: %s',path)
         return
     
     img *= (255.0/(np.amax(img)))
@@ -133,6 +141,10 @@ def generate_predictions(img_array):
         #print('orientation: %s', orientation_names[orientations[i]])
         #print('contrast: %s', contrast_names[contrasts[i]])
 
+    # TODO: Add criteria
+    # If cine, then keep label SAX
+    # If only one frame, then can apply apex, mid, or base
+    # If localizer (loc), then Scout and TRUFI can be grouped
     return (orientations, contrasts, cine_probability)
 
 # save mean slice images to local path (debugging purposes only)
