@@ -46,7 +46,7 @@ def classifyNifti(input_dir):
             img = nb.load(imgfile).get_fdata()
         except Exception as e:
             # print(e)
-            logging.warning('      nibabel could not load nifti file with path : %s',imgfile)
+            logging.warning('      failed to convert nifti to numpy array : %s',imgfile)
             errors += 1
         else:
             if len(img.shape) == 4:
@@ -56,13 +56,14 @@ def classifyNifti(input_dir):
             img_array.append(preprocess_image(img, imgfile))
             fetched_directory.append((imgfile, folderpath))
     img_array = np.array(img_array)
+    fetched_directory.sort(key=lambda y: y[1])
 
     # notify the user if some images were omitted from image array
     if errors > 0:
         logger.info('       failed loading {} images.'.format(errors))
 
     # generate predictions
-    logger.info('       generating predictions for %d images', img_array.shape[0])
+    logger.info('       generating predictions for %d images', len(fetched_directory))
     orientation, contrast, cine_probability = generate_predictions(img_array)
 
     # === debugging purposes only ===
