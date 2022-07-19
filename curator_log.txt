@@ -121,3 +121,6 @@
 2022-07-17 11:44:56,951 - curator - INFO - classifier.classifyNifti
 2022-07-17 11:45:10,065 - curator - INFO -        failed loading 50 images.
 2022-07-17 11:45:10,066 - curator - INFO -        generating predictions for 280 images
+2022-07-19 09:30:26,718 - curator - INFO - Classify Mode
+2022-07-19 09:30:26,719 - curator - INFO - classifier.classifyNifti
+2022-07-19 09:30:34,019 - curator - INFO -        generating predictions for 511 images

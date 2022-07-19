@@ -28,6 +28,7 @@ dicom2nifti>=2.3.0
 pydicom>=2.2.2
 tqdm>=4.62.3
 pandas>=1.3.4
+tensorflow>=2.9.1
 ```
 
 ## Additional CUDA setup notes
@@ -59,18 +60,18 @@ python curator.py classify --input_dir /niidirectory/
 # Additional usage details 
 
 * mode = "parse"
-* Read a folder containing unlabeled dicom images. sort and copy the files, and generate a csv file summarizing all the valid series for labeling.
-* Mandatory arguments: --input_dir, --output_dir, --csv_file
+    * Read a folder containing unlabeled dicom images. sort and copy the files, and generate a csv file summarizing all the valid series for labeling.
+    * Mandatory arguments: --input_dir, --output_dir, --csv_file
 
 * mode = "nifti"
-* Read a csv file containing columns "dcmdir" and "label". Images in dcmdir will be converted to nifti, one nifti per row.
-* Hint: Run parse to generate a csv file with dcmdir, add labels (contrast, 
-* Mandatory arguments: --csv_file, --output_dir
+    * Read a csv file containing columns "dcmdir" and "label". Images in dcmdir will be converted to nifti, one nifti per row.
+    * Hint: Run parse to generate a csv file with dcmdir, add labels (contrast, 
+    * Mandatory arguments: --csv_file, --output_dir
 
 * mode = "train"
-* Train a NN to label imaging data
-* Mandatory arguments: --input_dir, --csv_file
+    * Train a NN to label imaging data
+    * Mandatory arguments: --input_dir, --csv_file
 
 * mode = "classify"
-* Given a trained NN, make new inferences on unseen data
-* Mandartory arguments: --input_dir
+    * Given a trained NN, make new inferences on unseen data
+    * Mandartory arguments: --input_dir
