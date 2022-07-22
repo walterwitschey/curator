@@ -75,7 +75,9 @@ class imageReaderWriter():
                 if(series.isValidSeries or copy_all_series):
                     if(use_accession_as_filename):
                         studyDirectory=os.path.join(copy_dir,study.accessionNumber)
+                        logger.info("    writing study folder: %s",study.accessionNumber)
                     else:
+                        logger.info("    writing study folder: %s",study.patientName)
                         studyDirectory=os.path.join(copy_dir,study.patientName)
                     seriesDirectory=os.path.join(studyDirectory,str(series.seriesNumber)+"_"+series.seriesDescription)
                     if not os.path.exists(studyDirectory):
