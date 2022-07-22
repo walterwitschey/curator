@@ -64,7 +64,7 @@ class imageReaderWriter():
 
         return ["NONE"]
         
-    def copyValidSeriesAndUpdateStudyList(self,copy_dir,use_accession_as_filename=False,copy_all_series=True):
+    def copyValidSeriesAndUpdateStudyList(self,copy_dir,use_accession_as_filename=True,copy_all_series=True):
         logger.info("FileReader.copyValidSeriesAndUpdateStudyList()")
         logger.info("    Copying valid series to %s",copy_dir)
         if not os.path.exists(copy_dir):
@@ -73,7 +73,7 @@ class imageReaderWriter():
         for studyIndex, study in tqdm(enumerate(self.studyList[:])):
             for seriesIndex, series in enumerate(study.seriesList[:]):
                 if(series.isValidSeries or copy_all_series):
-                    if(use_accession_as_filename):
+                    if(use_accession_as_filename==True):
                         studyDirectory=os.path.join(copy_dir,study.accessionNumber)
                         logger.info("    writing study folder: %s",study.accessionNumber)
                     else:
