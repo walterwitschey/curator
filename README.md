@@ -47,6 +47,8 @@ python curator.py nifti --csv_file csv_file.csv --output_dir /outdcmdirectory/
 
 python curator.py classify --input_dir /niidirectory/
 
+python segmentation.py --input_dir /niidirectory/
+
 ```
 
 ## Arguments
