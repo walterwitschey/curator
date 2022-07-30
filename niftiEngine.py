@@ -130,7 +130,7 @@ class niftiEngine():
             with open(os.path.join(output_dir, scan_metadata_file), 'w') as f:
                 json.dump(slice_tag_dicts[0], f, indent=4)
         except:
-            logging.exception("Exception occurred: json.dump(%s, %s, %s)", slice_tag_dicts[0], f, indent=4)
+            logging.exception("Exception occurred: json.dump")
         if write_slice_jsons:
             with open(os.path.join(output_dir, slice_metadata_file), 'w') as f:
                 json.dump(slice_tag_dicts, f, indent=4)
