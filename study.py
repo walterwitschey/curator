@@ -88,3 +88,5 @@ class Image():
         self.filename = None
         self.scantype = None
         self.SOPInstanceUID = SOPInstanceUID
+        self.sliceLocation = None
+        self.TriggerTime = None

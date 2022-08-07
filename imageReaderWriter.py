@@ -7,14 +7,8 @@ import shutil
 import logging
 logger=logging.getLogger("curator")
 
-#debug
-import pandas as pd
-
 # pydicom
 import pydicom
-
-# dicom2nifti
-import dicom2nifti
 
 # custom modules
 from study import Study, Series, Image
@@ -70,26 +64,33 @@ class imageReaderWriter():
 
         return ["NONE"]
         
-    def copyValidSeriesAndUpdateStudyList(self,copy_dir,use_accession_as_filename=False,copy_all_series=True):
+    def copyValidSeriesAndUpdateStudyList(self,copy_dir,use_patientname_as_foldername=False,use_cmr_info_as_filename=False,copy_all_series=True):
         logger.info("FileReader.copyValidSeriesAndUpdateStudyList()")
         logger.info("    Copying valid series to %s",copy_dir)
+        logger.info("    use_cmr_info_as_filename %s",use_cmr_info_as_filename)
+        logger.info("    use_patientname_as_foldername %s",use_patientname_as_foldername)
         if not os.path.exists(copy_dir):
             os.makedirs(copy_dir,exist_ok=True)
         # pass through the study list, copy valid files, and update path
         for studyIndex, study in tqdm(enumerate(self.studyList[:])):
             for seriesIndex, series in enumerate(study.seriesList[:]):
                 if(series.isValidSeries or copy_all_series):
-                    if(use_accession_as_filename):
-                        studyDirectory=os.path.join(copy_dir,study.accessionNumber)
-                    else:
+                    if(use_patientname_as_foldername==True):
+                        logger.info("    writing study folder: %s",study.patientName)
                         studyDirectory=os.path.join(copy_dir,study.patientName)
+                    else:
+                        studyDirectory=os.path.join(copy_dir,study.accessionNumber)
+                        logger.info("    writing study folder: %s",study.accessionNumber)
                     seriesDirectory=os.path.join(studyDirectory,str(series.seriesNumber)+"_"+series.seriesDescription)
                     if not os.path.exists(studyDirectory):
                         os.makedirs(studyDirectory,exist_ok=True)
                     if not os.path.exists(seriesDirectory):
                         os.makedirs(seriesDirectory,exist_ok=True)
                     for imageIndex, image in enumerate(series.imageList[:]):
-                        new_filename = os.path.join(seriesDirectory,str(image.acquisitionNumber)+"_"+image.SOPInstanceUID+'.dcm')
+                        if(use_cmr_info_as_filename==True):
+                            new_filename = os.path.join(seriesDirectory,str(image.acquisitionNumber)+"_"+str(int(image.sliceLocation+1000))+"_"+str(int(image.TriggerTime))+"_"+image.SOPInstanceUID+'.dcm')
+                        else:
+                            new_filename = os.path.join(seriesDirectory,str(image.acquisitionNumber)+"_"+image.SOPInstanceUID+'.dcm')
                         shutil.copyfile(image.filename,new_filename)
         self.studyList = []
         self.studyList=self.queryDirectory(copy_dir,level=2)
@@ -154,6 +155,18 @@ class imageReaderWriter():
         except:
             patientName=""
             return
+        try:
+            tag = "SliceLocation"
+            sliceLocation = meta.data_element(tag).value
+        except:
+            sliceLocation=""
+            return
+        try:
+            tag = "TriggerTime"
+            TriggerTime = meta.data_element(tag).value
+        except:
+            TriggerTime=""
+            return
 
         studyfound = False
         for study in self.studyList:
@@ -211,6 +224,8 @@ class imageReaderWriter():
         newimage = Image(SOPInstanceUID)
         newimage.acquisitionNumber = acquisitionNumber
         newimage.filename = filename
+        newimage.sliceLocation = sliceLocation
+        newimage.TriggerTime = TriggerTime
         self.studyList[studyIndex].seriesList[seriesIndex].imageList.append(newimage)
 
     # Check if a series is suitable for processing

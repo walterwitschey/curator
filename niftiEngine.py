@@ -22,7 +22,7 @@ class niftiEngine():
         logger.info("niftiEngine.init()")
         self.name = name
     
-    def writeCSVToNifti(self,csv_file,output_dir,include_tags_txt,accession_as_folder):
+    def writeCSVToNifti(self,csv_file,output_dir,include_tags_txt):
         logger.info("niftiEngine.convertCSVToNifti")
         df=pd.read_csv(csv_file)
         
@@ -34,6 +34,18 @@ class niftiEngine():
         with open(include_tags_txt, 'r') as f:
             include_tags = [l.strip() for l in f.readlines()]
         
+        for index, row in tqdm(df.iterrows()):
+            dcmDirectory = row["dcmDirectory"]
+            seriesNumber = row["seriesNumber"]
+            seriesDescription = row["seriesDescription"]
+            accessionNumber = row["accessionNumber"]
+            patientName = row["patientName"]
+            #contrast = row["contrast"]
+            #orientation = row["orientation"]
+            nii_output_dir=os.path.join(output_dir,str(accessionNumber))
+            logger.info("Writing " + nii_output_dir)
+            self.process_dcm(dcmDirectory,nii_output_dir,include_tags)
+
         for index, row in tqdm(df.iterrows()):
             dcmDirectory = row["dcmDirectory"]
             seriesNumber = row["seriesNumber"]
@@ -78,8 +90,9 @@ class niftiEngine():
         return processed_tag_dict
 
 
-    def process_dcm(self, input_dir, output_dir,
+    def process_dcm(self,input_dir, output_dir,
                     include_tags=[], inject_tags={}, write_slice_jsons=False):
+        
 
         os.makedirs(output_dir, exist_ok=True)
         # output filenames
@@ -134,8 +147,7 @@ class niftiEngine():
             with open(os.path.join(output_dir, scan_metadata_file), 'w') as f:
                 json.dump(slice_tag_dicts[0], f, indent=4)
         except:
-            logging.exception("Exception occurred: json.dump(%s, %s, %s)", slice_tag_dicts[0], f, indent=4)
+            logging.exception("Exception occurred: json.dump")
         if write_slice_jsons:
             with open(os.path.join(output_dir, slice_metadata_file), 'w') as f:
                 json.dump(slice_tag_dicts, f, indent=4)
-                
