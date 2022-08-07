@@ -4,3 +4,4 @@ curator.code-workspace
 imageReaderWriter.pyc
 test.py
 __pychache__/
+*.pyc
