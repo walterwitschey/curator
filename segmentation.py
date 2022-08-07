@@ -29,6 +29,9 @@ def initLogger(name,logfile):
 def segment(cine, model):
     # adjust dimensions
     cine_arr = cine.get_fdata()
+
+    print(cine_arr.shape)
+
     roi_size = (256, 256)
     sw_batch_size = 1
 
@@ -41,10 +44,11 @@ def segment(cine, model):
     
     slices = np.transpose(np.asarray(slices)).swapaxes(0,1)
 
-    # make a copy olf original nifti with the segmented ventricle
+    # make a copy of original nifti with the segmented ventricle
     copynifti = nb.Nifti1Image(slices, cine.affine, cine.header)
-    assert copynifti.header == cine.header
-    assert copynifti.shape == cine.shape
+    # assert copynifti.header == cine.header
+    print(copynifti.shape)
+    # assert copynifti.shape == cine.shape
     return copynifti
 
 if __name__ == "__main__":
