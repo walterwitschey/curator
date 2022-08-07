@@ -30,7 +30,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
         description="Curator - Create databases of imaging data for manual curation")
-    parser.add_argument('curator_mode', choices=['parse', 'nifti', 'train','inference'])
+    parser.add_argument('curator_mode', choices=['parse', 'nifti', 'train','classify'])
     parser.add_argument("--input_dir", type=str, help="Input directory with dicom images to be curated")
     parser.add_argument("--output_dir",type=str,help="Output directory with curated files")
     parser.add_argument("--csv_file",type=str,help="csv file with data to curate")
