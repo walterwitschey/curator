@@ -12,6 +12,7 @@ import pandas as pd
 import numpy as np
 import nibabel as nb
 import matplotlib.pyplot as plt
+import pydicom
 
 # packages for neural network
 import tensorflow as tf
@@ -22,8 +23,80 @@ orientation_names = ["2ch", "3ch","4ch","SAX","LAX","apex","mid","base","LVOT","
 def int_code(x):
     return int(re.match('[0-9]+', os.path.basename(x)).group(0))
 
-def classifyNifti(input_dir):
+def classifyNifti(input_dir, use_dicom=False):
     logger.info("classifier.classifyNifti")
+    
+    # load nifti or dicom images
+    if (use_dicom==True):
+        img_array, phase_counts, fetched_directory, errors, seriesnames = load_dicoms(input_dir)
+    else:
+        img_array, phase_counts, fetched_directory, errors = load_niftis(input_dir)
+
+    # notify the user if some images were omitted from image array
+    if errors > 0:
+        logger.info('       failed loading {} images.'.format(errors))
+
+    # generate predictions
+    logger.info('       generating predictions for %d images', img_array.shape[0])
+    orientation, contrast, cine_probability = generate_predictions(img_array)
+
+    # === debugging purposes only ===
+    #save_images(img_array, os.path.join(os.path.dirname(os.path.realpath(__file__)), 'images'), orientation, contrast)
+
+    # iterate through directory go generate separate csv file for each study
+    if not(use_dicom):
+        parsedirectory, chunk = ([] for i in range(2))
+        initial = fetched_directory[0][1]
+        for num in range(len(fetched_directory)):
+            if initial == fetched_directory[num][1]:
+                chunk.append(fetched_directory[num] + (orientation_names[orientation[num]], contrast_names[contrast[num]], cine_probability[num]))
+            else:
+                parsedirectory.append(chunk)
+                chunk = []
+                chunk.append(fetched_directory[num] + (orientation_names[orientation[num]], contrast_names[contrast[num]], cine_probability[num]))
+                initial = fetched_directory[num][1]
+        parsedirectory.append(chunk)
+
+    # write predictions to csv
+    if (use_dicom == True):
+        with open(os.path.join(input_dir,'predictions.csv'),"w", newline='') as f:
+            writer = csv.writer(f)
+            writer.writerow(['File Name', 'Orientation', 'Contrast', 'Cine_Probability'])
+
+            for i, name in enumerate(seriesnames):
+                writer.writerow([name, orientation_names[orientation[i]], contrast_names[contrast[i]], cine_probability[i]])
+
+        # a separate collection only for sax cine images
+        with open(os.path.join(input_dir,'sax_cine_list.csv'),"w", newline='') as f:
+            writer = csv.writer(f)
+            writer.writerow(['File Name', 'Orientation', 'Contrast', 'Cine_Probability'])
+
+            # add images only if probability is high, has 30 phases, and predicted as SAX CINE
+            for i, name in enumerate(seriesnames):
+                if cine_probability[i] >= 0.9 and phase_counts[i] >= 20 and orientation_names[orientation[i]] == 'SAX' and contrast_names[contrast[i]] == 'Cine':
+                    writer.writerow([name, orientation_names[orientation[i]], contrast_names[contrast[i]], cine_probability[i]])
+    else:
+        for study in parsedirectory:
+            with open(os.path.join(study[0][1],'predictions.csv'),"w", newline='') as f:
+                writer = csv.writer(f)
+                writer.writerow(['File Name', 'Orientation', 'Contrast', 'Cine_Probability'])
+
+                for image in study:
+                    filename = image[0][len(image[1]) + 1:]
+                    writer.writerow([filename,image[2],image[3], image[4]])
+
+            # a separate collection only for sax cine images
+            with open(os.path.join(study[0][1],'sax_cine_list.csv'),"w", newline='') as f:
+                writer = csv.writer(f)
+                writer.writerow(['File Name', 'Orientation', 'Contrast', 'Cine_Probability'])
+
+                # add images only if probability is high, has 30 phases, and predicted as SAX CINE
+                for i, image in enumerate(study):
+                    if cine_probability[i] >= 0.9 and phase_counts[i] >= 20 and image[2] == 'SAX' and image[3] == 'Cine':
+                        filename = image[0][len(image[1]) + 1:]
+                        writer.writerow([filename, image[2], image[3], image[4]])
+
+def load_niftis(input_dir):
     search = sorted(glob.glob(os.path.join(input_dir,'**/*.nii'),recursive=True))
     results = sorted(search, key = int_code)
 
@@ -57,50 +130,45 @@ def classifyNifti(input_dir):
             fetched_directory.append((imgfile, folderpath))
     img_array = np.array(img_array)
     fetched_directory.sort(key=lambda y: y[1])
+    return img_array, phase_counts, fetched_directory, errors
 
-    # notify the user if some images were omitted from image array
-    if errors > 0:
-        logger.info('       failed loading {} images.'.format(errors))
+def load_dicoms(input_dir):
+    series = []
+    seriesnames = []
 
-    # generate predictions
-    logger.info('       generating predictions for %d images', len(fetched_directory))
-    orientation, contrast, cine_probability = generate_predictions(img_array)
+    for folder in os.listdir(input_dir):
+        folderpath = os.path.join(input_dir, folder)
+        if glob.glob(os.path.join(folderpath,'*.dcm')):
+            series.append(folderpath)
 
-    # === debugging purposes only ===
-    #save_images(img_array, os.path.join(os.path.dirname(os.path.realpath(__file__)), 'images'), orientation, contrast)
+    img_array = []
+    phase_counts = []
+    fetched_directory = []
+    errors = 0
 
-    # iterate through directory go generate separate csv file for each study
-    parsedirectory, chunk = ([] for i in range(2))
-    initial = fetched_directory[0][1]
-    for num in range(len(fetched_directory)):
-        if initial == fetched_directory[num][1]:
-            chunk.append(fetched_directory[num] + (orientation_names[orientation[num]], contrast_names[contrast[num]], cine_probability[num]))
+    # load all images in the same series
+    for seriespath in tqdm(series):
+        try:
+            onlyfiles = [os.path.join(seriespath, f) for f in os.listdir(seriespath) if os.path.isfile(os.path.join(seriespath, f))]
+            dicoms = [np.rot90(pydicom.read_file(dcm).pixel_array.astype('float64'),3) for dcm in onlyfiles]
+            img = np.stack(dicoms, axis=2)
+        except:
+            logging.warning('      failed to convert dcm to numpy array : %s',seriespath)
+            errors += 1
         else:
-            parsedirectory.append(chunk)
-            chunk = []
-            chunk.append(fetched_directory[num] + (orientation_names[orientation[num]], contrast_names[contrast[num]], cine_probability[num]))
-            initial = fetched_directory[num][1]
-    parsedirectory.append(chunk)
+            # check if image is 3d or 4d by checking if all images have same SeriesInstanceUID
+            fourdimension = all([pydicom.read_file(f).SeriesInstanceUID == pydicom.read_file(onlyfiles[0]).SeriesInstanceUID for f in onlyfiles])
 
-    for study in parsedirectory:
-        with open(os.path.join(study[0][1],'predictions.csv'),"w", newline='') as f:
-            writer = csv.writer(f)
-            writer.writerow(['File Name', 'Orientation', 'Contrast', 'Cine_Probability'])
+            if fourdimension:
+                phase_counts.append(len(onlyfiles))
+            else:
+                phase_counts.append(-1)
+            img_array.append(preprocess_image(img, seriespath))
+            seriesnames.append(seriespath[len(input_dir)+1:])
+            fetched_directory.append(seriespath)
+    img_array = np.array(img_array)
 
-            for image in study:
-                filename = image[0][len(image[1]) + 1:]
-                writer.writerow([filename,image[2],image[3], image[4]])
-
-        # a separate collection only for sax cine images
-        with open(os.path.join(study[0][1],'sax_cine_list.csv'),"w", newline='') as f:
-            writer = csv.writer(f)
-            writer.writerow(['File Name', 'Orientation', 'Contrast', 'Cine_Probability'])
-
-            # add images only if probability is high, has 30 phases, and predicted as SAX CINE
-            for i, image in enumerate(study):
-                if cine_probability[i] >= 0.9 and phase_counts[i] >= 20 and image[2] == 'SAX' and image[3] == 'Cine':
-                    filename = image[0][len(image[1]) + 1:]
-                    writer.writerow([filename, image[2], image[3], image[4]])
+    return img_array, phase_counts, fetched_directory, errors, seriesnames
 
 def preprocess_image(img, path):
 
