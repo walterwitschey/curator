@@ -43,6 +43,7 @@ if __name__ == "__main__":
         help="List of tags to retain in metadata JSON")
     parser.set_defaults(use_patientname_as_foldername=False)
     parser.set_defaults(use_cmr_info_as_filename=False)
+    parser.set_defaults(use_dicom=False)
     args = parser.parse_args()
     
     # Initialize logger

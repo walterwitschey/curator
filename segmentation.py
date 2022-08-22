@@ -12,6 +12,10 @@ import nibabel as nb
 import numpy as np
 from monai.inferers import sliding_window_inference
 from monai.networks.nets import UNet
+import pydicom
+
+#debugging
+from PIL import Image
 
 def initLogger(name,logfile):
     # Create debugging information (logger)
@@ -26,11 +30,9 @@ def initLogger(name,logfile):
     logger.addHandler(fileHandler)
     return logger
 
-def segment(cine, model):
+def segment_nii(cine, model):
     # adjust dimensions
     cine_arr = cine.get_fdata()
-
-    print(cine_arr.shape)
 
     roi_size = (256, 256)
     sw_batch_size = 1
@@ -41,15 +43,28 @@ def segment(cine, model):
         slice = torch.from_numpy(cine_arr[:,:,0,phase]).float().unsqueeze(0).unsqueeze(0)
         output = torch.argmax(sliding_window_inference(slice, roi_size, sw_batch_size, model), dim=1).detach()
         slices.append(output.numpy())
-    
+
     slices = np.transpose(np.asarray(slices)).swapaxes(0,1)
+    print(slices.shape)
 
     # make a copy of original nifti with the segmented ventricle
     copynifti = nb.Nifti1Image(slices, cine.affine, cine.header)
     # assert copynifti.header == cine.header
-    print(copynifti.shape)
+    # print(copynifti.shape)
     # assert copynifti.shape == cine.shape
     return copynifti
+
+def segment_dicom(cine, model):
+
+    # convert dicom to torch tensor
+    slice = np.rot90(cine.pixel_array.astype('float64'), 3)
+    slice = torch.from_numpy(slice.copy()).float().unsqueeze(0).unsqueeze(0)
+
+    roi_size = (256, 256)
+    sw_batch_size = 1
+    result = sliding_window_inference(slice, roi_size, sw_batch_size, model)
+    output = torch.argmax(result, dim=1).detach()[0]
+    return output.numpy()
 
 if __name__ == "__main__":
 
@@ -59,7 +74,8 @@ if __name__ == "__main__":
         description="Segmentation - Create lables of segmented ventricles in cardiac MRI")
     parser.add_argument("--input_dir", type=str, help="Input directory with nifti images to be curated")
     parser.add_argument("--log_file",type=str,help="txt file with log info",default="segmentation_log.txt")
-
+    parser.add_argument("--use_dicom",action='store_true',help="use dicom instead of nifti in classifier mode")
+    parser.set_defaults(use_dicom=False)
     args = parser.parse_args()
     
     # Initialize logger
@@ -76,16 +92,35 @@ if __name__ == "__main__":
         os.mkdir(os.path.join(output_path))
 
     # find all cine images
-    images = glob.glob(os.path.join(args.input_dir,'*.nii')) + glob.glob(os.path.join(args.input_dir,'*.nii.gz'))
-    cines = []
-    skipped = 0
-    for nifti_path in images:
-        nifti = nb.load(nifti_path)
-        if len(nifti.shape) != 4 or nifti.shape[3] < 20:
-            skipped += 1
-        else:
-            cines.append((nifti, nifti_path))
-    logger.info('       Skipped {0} images, Segmenting {1} cines'.format(skipped, len(cines)))
+    if (args.use_dicom == True):
+        cines = []
+        foldernames = []
+        skipped = 0
+
+        # check all series that are four dimensional and have more than 20 phases
+        for folder in os.listdir(args.input_dir):
+            folderpath = os.path.join(args.input_dir, folder)
+            if glob.glob(os.path.join(folderpath,'*.dcm')):
+                onlyfiles = [os.path.join(folderpath, f) for f in os.listdir(folderpath) if f.endswith('.dcm')]
+                fourdimension = all([pydicom.read_file(f).SeriesInstanceUID == pydicom.read_file(onlyfiles[0]).SeriesInstanceUID for f in onlyfiles])
+                
+                if fourdimension and len(onlyfiles) > 20:
+                    cines.append(folderpath)
+                    foldernames.append(folder)
+                else:
+                    skipped += 1
+        logger.info('       Skipped {0} images, Segmenting {1} cines'.format(skipped, len(cines)))
+    else:
+        images = glob.glob(os.path.join(args.input_dir,'*.nii')) + glob.glob(os.path.join(args.input_dir,'*.nii.gz'))
+        cines = []
+        skipped = 0
+        for nifti_path in images:
+            nifti = nb.load(nifti_path)
+            if len(nifti.shape) != 4 or nifti.shape[3] < 20:
+                skipped += 1
+            else:
+                cines.append((nifti, nifti_path))
+        logger.info('       Skipped {0} images, Segmenting {1} cines'.format(skipped, len(cines)))
 
     # load monai UNet model
     device = torch.device("cpu")
@@ -99,6 +134,22 @@ if __name__ == "__main__":
     model.load_state_dict(torch.load('best_metric_model.pth', map_location=torch.device('cpu')))
 
     # generate predictions for each cine
-    for cine, file_name in cines:
-        segmented = segment(cine, model)
-        nb.save(segmented, os.path.join(output_path, os.path.splitext(os.path.basename(file_name))[0] + '_segmented.nii'))
+    if (args.use_dicom == True):
+        for (cinefolder, nameonly) in zip(cines, foldernames):
+            # create a directory for each series
+            savepath = os.path.join(output_path, nameonly)
+            if not(os.path.exists(savepath)):
+                os.mkdir(savepath)
+
+            # segment each dicom slice
+            for dcm in os.listdir(cinefolder):
+                dicom = pydicom.dcmread(os.path.join(cinefolder, dcm))
+                segmented = segment_dicom(dicom, model)
+                dicom.PixelData = segmented.tobytes()
+                
+                #dicom.save_as(os.path.join(savepath, dcm))
+                pydicom.dcmwrite(os.path.join(savepath, dcm), dicom)
+    else:
+        for cine, file_name in cines:
+            segmented = segment_nii(cine, model)
+            nb.save(segmented, os.path.join(output_path, os.path.splitext(os.path.basename(file_name))[0] + '_segmented.nii'))
