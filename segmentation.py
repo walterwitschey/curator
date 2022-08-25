@@ -63,8 +63,8 @@ def segment_dicom(cine, model):
     roi_size = (256, 256)
     sw_batch_size = 1
     result = sliding_window_inference(slice, roi_size, sw_batch_size, model)
-    output = torch.argmax(result, dim=1).detach()[0]
-    return output.numpy()
+    output = torch.argmax(result, dim=1).detach()
+    return np.transpose(output[0,:,:].numpy()) * 100
 
 if __name__ == "__main__":
 
@@ -145,10 +145,11 @@ if __name__ == "__main__":
             for dcm in os.listdir(cinefolder):
                 dicom = pydicom.dcmread(os.path.join(cinefolder, dcm))
                 segmented = segment_dicom(dicom, model)
-                dicom.PixelData = segmented.tobytes()
-                
-                #dicom.save_as(os.path.join(savepath, dcm))
-                pydicom.dcmwrite(os.path.join(savepath, dcm), dicom)
+
+                assert segmented.shape == dicom.pixel_array.shape
+                dicom.PixelData = segmented.astype(np.int16).tobytes()
+                dicom.SeriesNumber = dicom.SeriesNumber + 3000
+                dicom.save_as(os.path.join(savepath, dcm))
     else:
         for cine, file_name in cines:
             segmented = segment_nii(cine, model)
