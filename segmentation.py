@@ -87,7 +87,8 @@ if __name__ == "__main__":
             sys.exit()
 
     # create a segmentation folder
-    output_path = os.path.join(args.input_dir,'segmentations')
+    foldername = '{}_segmentations'.format(os.path.basename(args.input_dir))
+    output_path = os.path.join(os.path.dirname(args.input_dir), foldername)
     if not(os.path.exists(output_path)):
         os.mkdir(os.path.join(output_path))
 

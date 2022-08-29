@@ -1,3 +1,4 @@
+from asyncio.windows_events import NULL
 from PIL import Image as im
 import os
 import csv
@@ -5,6 +6,7 @@ import logging
 import glob
 import re
 from tqdm import tqdm
+import shutil
 logger=logging.getLogger("curator")
 
 # load dependencies
@@ -17,8 +19,11 @@ import pydicom
 # packages for neural network
 import tensorflow as tf
 
-contrast_names = ["Cine","T1","T1*","T2","T2*","T1rho","Trufi","LGE","PERF_AIF","PSIR","STIR","MAG","Scout","TSE", "DE"]
-orientation_names = ["2ch", "3ch","4ch","SAX","LAX","apex","mid","base","LVOT","Aoflow","AV","loc","candycane","paflow","VLA", "whole heart", "AO_AX"]
+contrast_names = ['CINE', 'T1', 'T1*', 'T2', 'T2*', 'T1RHO', 'TRUFI', 'LGE', 'PERF_AIF', 'PSIR', 'STIR', 'MAG',
+ 'SCOUT', 'TSE', 'DE', 'PSIR_MAG', 'HASTE', 'TWIST', 'FL3D', 'PSIR_PHASE', 'PC_MAG', 'PC_PHASE', 'GRE', 'T1_ERROR', 'T1_MAP', 'T1_IR', 'T1RHO_MAP', 'T1RHO_ERROR']
+orientation_names = ['2CH', '3CH', '4CH', 'SAX', 'LAX', 'APEX', 'MID', 'BASE', 'LVOT', 'AOFLOW', 'AV', 'LOC',
+ 'CANDYCANE', 'PAFLOW', 'VLA', 'WHOLE HEART', 'AO_AX', 'AXIAL', 'MPA', 'RPA', 'LPA', 'TRICUSPID', 'SAGITTAL',
+  'CORONAL', 'AXIAL_MIP', 'SAGITTAL_MIP', 'CORONAL_MIP', 'RVOT', 'SVC', 'IVC', 'DAO', 'LPV', 'RPV', 'MITRAL', 'RV2CH', 'LV3CH', 'SAG_RVOT']
 
 def int_code(x):
     return int(re.match('[0-9]+', os.path.basename(x)).group(0))
@@ -59,6 +64,7 @@ def classifyNifti(input_dir, use_dicom=False):
 
     # write predictions to csv
     if (use_dicom == True):
+
         with open(os.path.join(input_dir,'predictions.csv'),"w", newline='') as f:
             writer = csv.writer(f)
             writer.writerow(['File Name', 'Orientation', 'Contrast', 'Cine_Probability'])
@@ -75,6 +81,7 @@ def classifyNifti(input_dir, use_dicom=False):
             for i, name in enumerate(seriesnames):
                 if cine_probability[i] >= 0.9 and phase_counts[i] >= 20 and orientation_names[orientation[i]] == 'SAX' and contrast_names[contrast[i]] == 'Cine':
                     writer.writerow([name, orientation_names[orientation[i]], contrast_names[contrast[i]], cine_probability[i]])
+
     else:
         for study in parsedirectory:
             with open(os.path.join(study[0][1],'predictions.csv'),"w", newline='') as f:
@@ -95,6 +102,11 @@ def classifyNifti(input_dir, use_dicom=False):
                     if cine_probability[i] >= 0.9 and phase_counts[i] >= 20 and image[2] == 'SAX' and image[3] == 'Cine':
                         filename = image[0][len(image[1]) + 1:]
                         writer.writerow([filename, image[2], image[3], image[4]])
+
+    # sort dicoms into each category: supports dicom only
+    if (use_dicom == True):
+        generate_sorted_folder(input_dir, orientation, contrast, seriesnames)
+
 
 def load_niftis(input_dir):
     search = sorted(glob.glob(os.path.join(input_dir,'**/*.nii'),recursive=True))
@@ -150,7 +162,7 @@ def load_dicoms(input_dir):
     for seriespath in tqdm(series):
         try:
             onlyfiles = [os.path.join(seriespath, f) for f in os.listdir(seriespath) if os.path.isfile(os.path.join(seriespath, f))]
-            dicoms = [np.rot90(pydicom.read_file(dcm).pixel_array.astype('float64'),3) for dcm in onlyfiles]
+            dicoms = [pydicom.read_file(dcm).pixel_array.astype('float64') for dcm in onlyfiles]
             img = np.stack(dicoms, axis=2)
         except:
             logging.warning('      failed to convert dcm to numpy array : %s',seriespath)
@@ -203,7 +215,7 @@ def generate_predictions(img_array):
     contrasts = np.argmax(predict_contrast.predict(img_array), axis=1)
 
     # cache and return probabilities for cine
-    cine_probability = [pred[0] for pred in predict_contrast.predict(img_array)]
+    cine_probability = [pred[0] for pred in contrast_model.predict(img_array)]
     
     # print results (debugging only)
     #for i in range(orientations.shape[0]):
@@ -215,6 +227,29 @@ def generate_predictions(img_array):
     # If only one frame, then can apply apex, mid, or base
     # If localizer (loc), then Scout and TRUFI can be grouped
     return (orientations, contrasts, cine_probability)
+
+def generate_sorted_folder(input_dir, orientation, contrast, seriesnames):
+    # generate a sorted folder in the parent directory
+    newfolder = 'Classified_{}'.format(os.path.basename(input_dir))
+    newpath = os.path.join(os.path.dirname(input_dir), newfolder)
+
+    if not(os.path.isdir(newpath)):
+        os.mkdir(newpath)
+
+    # iterate through each series
+    for i, name in enumerate(seriesnames):
+        classname = '{}_{}'.format(orientation_names[orientation[i]], contrast_names[contrast[i]])
+        
+        # if this class name folder does not exist, make a new one
+        classfolder = os.path.join(newpath, classname)
+        if not(os.path.isdir(classfolder)):
+            os.mkdir(classfolder)
+
+        # copy paste all series
+        src = os.path.join(input_dir, name)
+        dst = os.path.join(classfolder, name)
+        shutil.copytree(src, dst)
+    
 
 # save mean slice images to local path (debugging purposes only)
 def save_images(image_array, file_path, orientation, contrast):
