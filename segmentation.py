@@ -4,6 +4,7 @@ import os
 import sys
 import logging
 import glob
+import csv
 
 # required modules
 import matplotlib.pyplot as plt
@@ -142,15 +143,30 @@ if __name__ == "__main__":
             if not(os.path.exists(savepath)):
                 os.mkdir(savepath)
 
-            # segment each dicom slice
-            for dcm in os.listdir(cinefolder):
-                dicom = pydicom.dcmread(os.path.join(cinefolder, dcm))
-                segmented = segment_dicom(dicom, model)
+            # write a csv file
+            with open(os.path.join(savepath, 'segmentations.csv'), 'w', newline='') as f:
+                writer = csv.writer(f)
+                writer.writerow(['file path', 'trigger time', 'slice location', 'RV blood pool', 'LV myocardium', 'LV blood pool', 'voxel size'])
 
-                assert segmented.shape == dicom.pixel_array.shape
-                dicom.PixelData = segmented.astype(np.int16).tobytes()
-                dicom.SeriesNumber = dicom.SeriesNumber + 3000
-                dicom.save_as(os.path.join(savepath, dcm))
+                # segment each dicom slice
+                for dcm in os.listdir(cinefolder):
+                    dicom = pydicom.dcmread(os.path.join(cinefolder, dcm))
+                    segmented = segment_dicom(dicom, model)
+
+                    assert segmented.shape == dicom.pixel_array.shape
+                    dicom.PixelData = segmented.astype(np.int16).tobytes()
+                    dicom.SeriesNumber = dicom.SeriesNumber + 3000
+                    dicom.save_as(os.path.join(savepath, dcm))
+
+                    # write entries into csv file
+                    row = [os.path.join(cinefolder, dcm), dicom.TriggerTime, dicom.SliceLocation]
+                    voxelsize = dicom.PixelSpacing[0] * dicom.PixelSpacing[1] * max(dicom.SliceThickness, dicom.SpacingBetweenSlices)
+
+                    # get counts of each pixel
+                    counts = np.unique(segmented.astype(np.int16), return_counts=True)[1]
+                    row.extend([counts[3] * voxelsize, counts[2] * voxelsize, counts[1] * voxelsize, voxelsize])
+                    writer.writerow(row)
+
     else:
         for cine, file_name in cines:
             segmented = segment_nii(cine, model)
