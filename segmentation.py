@@ -163,8 +163,9 @@ if __name__ == "__main__":
                     voxelsize = dicom.PixelSpacing[0] * dicom.PixelSpacing[1] * max(dicom.SliceThickness, dicom.SpacingBetweenSlices)
 
                     # get counts of each pixel
-                    counts = np.unique(segmented.astype(np.int16), return_counts=True)[1]
-                    row.extend([counts[3] * voxelsize, counts[2] * voxelsize, counts[1] * voxelsize, voxelsize])
+                    label = segmented.astype(np.int16)
+                    counts = [np.count_nonzero(label == 300), np.count_nonzero(label == 200), np.count_nonzero(label == 100)]
+                    row.extend([counts[0] * voxelsize, counts[1] * voxelsize, counts[2] * voxelsize, voxelsize])
                     writer.writerow(row)
 
     else:
