@@ -61,6 +61,7 @@ python segmentation.py --input_dir /niidirectory/
 * `--use_patientname_as_foldername`: (Parse) optional feature to use dicom field PatientName as foldername (default is AccessionNumber).
 * `--use_cmr_info_as_filename`: (Parse) optional feature to place dicom fields SlicePosition_TriggerTime in dicom filename
 * `--use_dicom`: (Classify) optional feature to use dicoms instead of niftis
+* `--sax_cine_only`: (Classify) the classifier will only copy paste sax cine images to the output directory
 
 # Additional usage details 
 

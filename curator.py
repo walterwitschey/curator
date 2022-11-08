@@ -38,12 +38,14 @@ if __name__ == "__main__":
     parser.add_argument("--use_patientname_as_foldername",action='store_true',help="use PatientName as folder name (default uses accession)")
     parser.add_argument("--use_cmr_info_as_filename",action='store_true',help="uses TriggerTime and SliceLocation in filename")
     parser.add_argument("--use_dicom",action='store_true',help="use dicom instead of nifti in classifier mode")
+    parser.add_argument("--sax_cine_only",action='store_true',help="classifier will only copy and sort SAX CINE images")
     parser.add_argument("--log_file",type=str,help="txt file with log info",default="curator_log.txt")
     parser.add_argument("--include_tags_txt", type=str, default=default_include_tags_txt,
         help="List of tags to retain in metadata JSON")
     parser.set_defaults(use_patientname_as_foldername=False)
     parser.set_defaults(use_cmr_info_as_filename=False)
     parser.set_defaults(use_dicom=False)
+    parser.set_defaults(sax_cine_only=False)
     args = parser.parse_args()
     
     # Initialize logger
@@ -100,5 +102,5 @@ if __name__ == "__main__":
             logger.error("    Check that --input_dir and --output_dir are defined")
             sys.exit()
         
-        classifier.classifyNifti(args.input_dir,args.output_dir,args.use_dicom)
+        classifier.classifyNifti(args.input_dir,args.output_dir,args.use_dicom, args.sax_cine_only)
         sys.exit()

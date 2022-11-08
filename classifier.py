@@ -38,7 +38,7 @@ def single_subject(input_dir):
             single = True
     return single
 
-def classifyNifti(input_dir, output_dir, use_dicom=False):
+def classifyNifti(input_dir, output_dir, use_dicom=False, sax_cine_only=False):
     logger.info("classifier.classifyNifti")
     
     # load nifti or dicom images
@@ -63,14 +63,13 @@ def classifyNifti(input_dir, output_dir, use_dicom=False):
             for subject in subjects:
 
                 singleinput = os.path.join(input_dir, subject)
-                print(singleinput)
-                classifySubject(singleinput, outpath, use_dicom)
+                classifySubject(singleinput, outpath, use_dicom, sax_cine_only)
     else:
         # use niftis
         classifySubject(input_dir, output_dir, use_dicom)
 
 
-def classifySubject(input_dir, output_dir, use_dicom):
+def classifySubject(input_dir, output_dir, use_dicom, sax_cine_only):
     
     if (use_dicom == True):
         img_array, phase_counts, fetched_directory, errors, seriesnames = load_dicoms(input_dir)
@@ -106,7 +105,7 @@ def classifySubject(input_dir, output_dir, use_dicom):
     
     # sort dicoms into each category: supports dicom only
     if (use_dicom == True):
-        generate_sorted_folder(input_dir, output_dir, orientation, contrast, seriesnames)
+        generate_sorted_folder(input_dir, output_dir, orientation, contrast, seriesnames, sax_cine_only)
 
     # write predictions to csv
     if (use_dicom == True):
@@ -270,10 +269,9 @@ def generate_predictions(img_array):
     # If localizer (loc), then Scout and TRUFI can be grouped
     return (orientations, contrasts, cine_probability)
 
-def generate_sorted_folder(input_dir, output_dir, orientation, contrast, seriesnames):
+def generate_sorted_folder(input_dir, output_dir, orientation, contrast, seriesnames, sax_cine_only):
     # generate a sorted folder in the parent directory
     newfolder = 'Classified_{}'.format(os.path.basename(input_dir))
-    print(output_dir)
     newpath = os.path.join(output_dir, newfolder)
 
     if not(os.path.isdir(newpath)):
@@ -281,17 +279,18 @@ def generate_sorted_folder(input_dir, output_dir, orientation, contrast, seriesn
 
     # iterate through each series
     for i, name in enumerate(seriesnames):
-        classname = '{}_{}'.format(orientation_names[orientation[i]], contrast_names[contrast[i]])
-        
-        # if this class name folder does not exist, make a new one
-        classfolder = os.path.join(newpath, classname)
-        if not(os.path.isdir(classfolder)):
-            os.mkdir(classfolder)
+        if not(sax_cine_only) or (sax_cine_only and orientation[i] == 3 and contrast[i] == 0):
+            classname = '{}_{}'.format(orientation_names[orientation[i]], contrast_names[contrast[i]])
+            
+            # if this class name folder does not exist, make a new one
+            classfolder = os.path.join(newpath, classname)
+            if not(os.path.isdir(classfolder)):
+                os.mkdir(classfolder)
 
-        # copy paste all series
-        src = os.path.join(input_dir, name)
-        dst = os.path.join(classfolder, name)
-        shutil.copytree(src, dst)
+            # copy paste all series
+            src = os.path.join(input_dir, name)
+            dst = os.path.join(classfolder, name)
+            shutil.copytree(src, dst)
     
 
 # save mean slice images to local path (debugging purposes only)
