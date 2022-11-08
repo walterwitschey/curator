@@ -96,9 +96,9 @@ if __name__ == "__main__":
         # A valid csv file has to be given as an input
         logger.info("Classify Mode")
         
-        if args.input_dir is None:
-            logger.error("    Check that --input_dir is defined")
+        if (args.input_dir is None or args.output_dir is None):
+            logger.error("    Check that --input_dir and --output_dir are defined")
             sys.exit()
         
-        classifier.classifyNifti(args.input_dir,args.use_dicom)
+        classifier.classifyNifti(args.input_dir,args.output_dir,args.use_dicom)
         sys.exit()

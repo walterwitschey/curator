@@ -19,7 +19,7 @@ import pydicom
 # packages for neural network
 import tensorflow as tf
 
-contrast_names = ['CINE', 'T1', 'T1*', 'T2', 'T2*', 'T1RHO', 'TRUFI', 'LGE', 'PERF_AIF', 'PSIR', 'STIR', 'MAG',
+contrast_names = ['CINE', 'T1', 'T1_star', 'T2', 'T2_star', 'T1RHO', 'TRUFI', 'LGE', 'PERF_AIF', 'PSIR', 'STIR', 'MAG',
  'SCOUT', 'TSE', 'DE', 'PSIR_MAG', 'HASTE', 'TWIST', 'FL3D', 'PSIR_PHASE', 'PC_MAG', 'PC_PHASE', 'GRE', 'T1_ERROR', 'T1_MAP', 'T1_IR', 'T1RHO_MAP', 'T1RHO_ERROR']
 orientation_names = ['2CH', '3CH', '4CH', 'SAX', 'LAX', 'APEX', 'MID', 'BASE', 'LVOT', 'AOFLOW', 'AV', 'LOC',
  'CANDYCANE', 'PAFLOW', 'VLA', 'WHOLE HEART', 'AO_AX', 'AXIAL', 'MPA', 'RPA', 'LPA', 'TRICUSPID', 'SAGITTAL',
@@ -28,12 +28,54 @@ orientation_names = ['2CH', '3CH', '4CH', 'SAX', 'LAX', 'APEX', 'MID', 'BASE', '
 def int_code(x):
     return int(re.match('[0-9]+', os.path.basename(x)).group(0))
 
-def classifyNifti(input_dir, use_dicom=False):
+def single_subject(input_dir):
+    folders = os.listdir(input_dir)
+    checkpath = os.path.join(input_dir, folders[0])
+    single = False
+
+    for i in os.listdir(checkpath):
+        if i.endswith('.dcm'):
+            single = True
+    return single
+
+def classifyNifti(input_dir, output_dir, use_dicom=False):
     logger.info("classifier.classifyNifti")
     
     # load nifti or dicom images
     if (use_dicom==True):
+        logger.info('       using dicoms')
+        # first, check for file hierarchy
+        onesubject = single_subject(input_dir)
+        if onesubject:
+            logger.info('       working with only one subject')
+            classifySubject(input_dir, output_dir, use_dicom)
+
+        else:
+            logger.info('       working with multiple subjects')
+
+            # check if output path already exists
+            outpath = os.path.join(output_dir, 'dcm')
+            if not(os.path.isdir(outpath)):
+                os.mkdir(outpath)
+
+            # run classifier for each subject
+            subjects = os.listdir(input_dir)
+            for subject in subjects:
+
+                singleinput = os.path.join(input_dir, subject)
+                print(singleinput)
+                classifySubject(singleinput, outpath, use_dicom)
+    else:
+        # use niftis
+        classifySubject(input_dir, output_dir, use_dicom)
+
+
+def classifySubject(input_dir, output_dir, use_dicom):
+    
+    if (use_dicom == True):
         img_array, phase_counts, fetched_directory, errors, seriesnames = load_dicoms(input_dir)
+        newfolder = 'Classified_{}'.format(os.path.basename(input_dir))
+        csvpath = os.path.join(output_dir, newfolder)
     else:
         img_array, phase_counts, fetched_directory, errors = load_niftis(input_dir)
 
@@ -61,11 +103,15 @@ def classifyNifti(input_dir, use_dicom=False):
                 chunk.append(fetched_directory[num] + (orientation_names[orientation[num]], contrast_names[contrast[num]], cine_probability[num]))
                 initial = fetched_directory[num][1]
         parsedirectory.append(chunk)
+    
+    # sort dicoms into each category: supports dicom only
+    if (use_dicom == True):
+        generate_sorted_folder(input_dir, output_dir, orientation, contrast, seriesnames)
 
     # write predictions to csv
     if (use_dicom == True):
 
-        with open(os.path.join(input_dir,'predictions.csv'),"w", newline='') as f:
+        with open(os.path.join(csvpath,'predictions.csv'),"w", newline='') as f:
             writer = csv.writer(f)
             writer.writerow(['File Name', 'Orientation', 'Contrast', 'Cine_Probability'])
 
@@ -73,7 +119,7 @@ def classifyNifti(input_dir, use_dicom=False):
                 writer.writerow([name, orientation_names[orientation[i]], contrast_names[contrast[i]], cine_probability[i]])
 
         # a separate collection only for sax cine images
-        with open(os.path.join(input_dir,'sax_cine_list.csv'),"w", newline='') as f:
+        with open(os.path.join(csvpath,'sax_cine_list.csv'),"w", newline='') as f:
             writer = csv.writer(f)
             writer.writerow(['File Name', 'Orientation', 'Contrast', 'Cine_Probability'])
 
@@ -102,10 +148,6 @@ def classifyNifti(input_dir, use_dicom=False):
                     if cine_probability[i] >= 0.9 and phase_counts[i] >= 20 and image[2] == 'SAX' and image[3] == 'Cine':
                         filename = image[0][len(image[1]) + 1:]
                         writer.writerow([filename, image[2], image[3], image[4]])
-
-    # sort dicoms into each category: supports dicom only
-    if (use_dicom == True):
-        generate_sorted_folder(input_dir, orientation, contrast, seriesnames)
 
 
 def load_niftis(input_dir):
@@ -228,10 +270,11 @@ def generate_predictions(img_array):
     # If localizer (loc), then Scout and TRUFI can be grouped
     return (orientations, contrasts, cine_probability)
 
-def generate_sorted_folder(input_dir, orientation, contrast, seriesnames):
+def generate_sorted_folder(input_dir, output_dir, orientation, contrast, seriesnames):
     # generate a sorted folder in the parent directory
     newfolder = 'Classified_{}'.format(os.path.basename(input_dir))
-    newpath = os.path.join(os.path.dirname(input_dir), newfolder)
+    print(output_dir)
+    newpath = os.path.join(output_dir, newfolder)
 
     if not(os.path.isdir(newpath)):
         os.mkdir(newpath)

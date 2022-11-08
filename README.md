@@ -45,7 +45,7 @@ python curator.py parse --input_dir /dcmdirectory/ --output_dir /outdcmdirectory
 
 python curator.py nifti --csv_file csv_file.csv --output_dir /outdcmdirectory/
 
-python curator.py classify --input_dir /niidirectory/
+python curator.py classify --input_dir /dcmdirectory/ --output_dir /classified_directory/
 
 python segmentation.py --input_dir /niidirectory/
 
@@ -60,6 +60,7 @@ python segmentation.py --input_dir /niidirectory/
 * `--log_file`: Log file where results will be stored
 * `--use_patientname_as_foldername`: (Parse) optional feature to use dicom field PatientName as foldername (default is AccessionNumber).
 * `--use_cmr_info_as_filename`: (Parse) optional feature to place dicom fields SlicePosition_TriggerTime in dicom filename
+* `--use_dicom`: (Classify) optional feature to use dicoms instead of niftis
 
 # Additional usage details 
 
@@ -78,4 +79,4 @@ python segmentation.py --input_dir /niidirectory/
 
 * mode = "classify"
 * Given a trained NN, make new inferences on unseen data
-* Mandartory arguments: --input_dir
+* Mandartory arguments: --input_dir, --output_dir
