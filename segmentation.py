@@ -73,6 +73,7 @@ def single_subject(input_dir):
     checkpath = os.path.join(input_dir, folders[0])
     single = False
 
+    print(checkpath)
     for i in os.listdir(checkpath):
         if i.endswith('.dcm'):
             single = True
@@ -121,7 +122,10 @@ def processSeries(input_dir, output_dir, use_dicom):
     channels=(16, 32, 64, 128, 256),
     strides=(2, 2, 2, 2),
     )
-    model.load_state_dict(torch.load('best_metric_model.pth', map_location=torch.device('cpu')))
+    # load best metric (using cpu device)
+    root_dir = r'D:\TOF'
+    model.load_state_dict(torch.load(
+        os.path.join(root_dir, "best_metric_model_2022_11_08_only_all3.pth"), map_location=torch.device('cpu')))
 
     # generate predictions for each cine
     if (use_dicom == True):
@@ -147,14 +151,14 @@ def processSeries(input_dir, output_dir, use_dicom):
                     dicom.save_as(os.path.join(savepath, dcm))
 
                     # write entries into csv file
-                    row = [os.path.join(cinefolder, dcm), dicom.TriggerTime, dicom.SliceLocation]
-                    voxelsize = dicom.PixelSpacing[0] * dicom.PixelSpacing[1] * max(dicom.SliceThickness, dicom.SpacingBetweenSlices)
+                    #row = [os.path.join(cinefolder, dcm), dicom.TriggerTime, dicom.SliceLocation]
+                    #voxelsize = dicom.PixelSpacing[0] * dicom.PixelSpacing[1] * max(dicom.SliceThickness, dicom.SpacingBetweenSlices)
 
                     # get counts of each pixel
-                    label = segmented.astype(np.int16)
-                    counts = [np.count_nonzero(label == 300), np.count_nonzero(label == 200), np.count_nonzero(label == 100)]
-                    row.extend([counts[0] * voxelsize, counts[1] * voxelsize, counts[2] * voxelsize, voxelsize])
-                    writer.writerow(row)
+                    #label = segmented.astype(np.int16)
+                    #counts = [np.count_nonzero(label == 300), np.count_nonzero(label == 200), np.count_nonzero(label == 100)]
+                    #row.extend([counts[0] * voxelsize, counts[1] * voxelsize, counts[2] * voxelsize, voxelsize])
+                    #writer.writerow(row)
 
     else:
         for cine, file_name in cines:

@@ -48,7 +48,7 @@ def classifyNifti(input_dir, output_dir, use_dicom=False, sax_cine_only=False):
         onesubject = single_subject(input_dir)
         if onesubject:
             logger.info('       working with only one subject')
-            classifySubject(input_dir, output_dir, use_dicom)
+            classifySubject(input_dir, output_dir, use_dicom, sax_cine_only)
 
         else:
             logger.info('       working with multiple subjects')
