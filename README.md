@@ -47,7 +47,7 @@ python curator.py nifti --csv_file csv_file.csv --output_dir /outdcmdirectory/
 
 python curator.py classify --input_dir /dcmdirectory/ --output_dir /classified_directory/
 
-python segmentation.py --input_dir /niidirectory/
+python segmentation.py --input_dir /niidirectory/ --output_dir /classified_directory/
 
 ```
 
@@ -60,7 +60,7 @@ python segmentation.py --input_dir /niidirectory/
 * `--log_file`: Log file where results will be stored
 * `--use_patientname_as_foldername`: (Parse) optional feature to use dicom field PatientName as foldername (default is AccessionNumber).
 * `--use_cmr_info_as_filename`: (Parse) optional feature to place dicom fields SlicePosition_TriggerTime in dicom filename
-* `--use_dicom`: (Classify) optional feature to use dicoms instead of niftis
+* `--use_dicom`: (Classify / Segmentation) optional feature to use dicoms instead of niftis
 * `--sax_cine_only`: (Classify) the classifier will only copy paste sax cine images to the output directory
 
 # Additional usage details 

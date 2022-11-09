@@ -67,41 +67,29 @@ def segment_dicom(cine, model):
     output = torch.argmax(result, dim=1).detach()
     return np.transpose(output[0,:,:].numpy()) * 100
 
-if __name__ == "__main__":
+# checks input directory hierarchy
+def single_subject(input_dir):
+    folders = os.listdir(input_dir)
+    checkpath = os.path.join(input_dir, folders[0])
+    single = False
 
-    # command line parser
-    parser = argparse.ArgumentParser(
-        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
-        description="Segmentation - Create lables of segmented ventricles in cardiac MRI")
-    parser.add_argument("--input_dir", type=str, help="Input directory with nifti images to be curated")
-    parser.add_argument("--log_file",type=str,help="txt file with log info",default="segmentation_log.txt")
-    parser.add_argument("--use_dicom",action='store_true',help="use dicom instead of nifti in classifier mode")
-    parser.set_defaults(use_dicom=False)
-    args = parser.parse_args()
-    
-    # Initialize logger
-    logger=initLogger("segmentation",args.log_file)
+    for i in os.listdir(checkpath):
+        if i.endswith('.dcm'):
+            single = True
+    return single
 
-    # check for empty input directory
-    if args.input_dir is None:
-            logger.error("    Check that --input_dir is defined")
-            sys.exit()
 
-    # create a segmentation folder
-    foldername = '{}_segmentations'.format(os.path.basename(args.input_dir))
-    output_path = os.path.join(os.path.dirname(args.input_dir), foldername)
-    if not(os.path.exists(output_path)):
-        os.mkdir(os.path.join(output_path))
+def processSeries(input_dir, output_dir, use_dicom):
 
     # find all cine images
-    if (args.use_dicom == True):
+    if (use_dicom == True):
         cines = []
         foldernames = []
         skipped = 0
 
         # check all series that are four dimensional and have more than 20 phases
-        for folder in os.listdir(args.input_dir):
-            folderpath = os.path.join(args.input_dir, folder)
+        for folder in os.listdir(input_dir):
+            folderpath = os.path.join(input_dir, folder)
             if glob.glob(os.path.join(folderpath,'*.dcm')):
                 onlyfiles = [os.path.join(folderpath, f) for f in os.listdir(folderpath) if f.endswith('.dcm')]
                 fourdimension = all([pydicom.read_file(f).SeriesInstanceUID == pydicom.read_file(onlyfiles[0]).SeriesInstanceUID for f in onlyfiles])
@@ -113,7 +101,7 @@ if __name__ == "__main__":
                     skipped += 1
         logger.info('       Skipped {0} images, Segmenting {1} cines'.format(skipped, len(cines)))
     else:
-        images = glob.glob(os.path.join(args.input_dir,'*.nii')) + glob.glob(os.path.join(args.input_dir,'*.nii.gz'))
+        images = glob.glob(os.path.join(input_dir,'*.nii')) + glob.glob(os.path.join(input_dir,'*.nii.gz'))
         cines = []
         skipped = 0
         for nifti_path in images:
@@ -136,10 +124,10 @@ if __name__ == "__main__":
     model.load_state_dict(torch.load('best_metric_model.pth', map_location=torch.device('cpu')))
 
     # generate predictions for each cine
-    if (args.use_dicom == True):
+    if (use_dicom == True):
         for (cinefolder, nameonly) in zip(cines, foldernames):
             # create a directory for each series
-            savepath = os.path.join(output_path, nameonly)
+            savepath = os.path.join(output_dir, nameonly)
             if not(os.path.exists(savepath)):
                 os.mkdir(savepath)
 
@@ -171,4 +159,53 @@ if __name__ == "__main__":
     else:
         for cine, file_name in cines:
             segmented = segment_nii(cine, model)
-            nb.save(segmented, os.path.join(output_path, os.path.splitext(os.path.basename(file_name))[0] + '_segmented.nii'))
+            nb.save(segmented, os.path.join(output_dir, os.path.splitext(os.path.basename(file_name))[0] + '_segmented.nii'))
+
+
+# main method
+if __name__ == "__main__":
+
+    # command line parser
+    parser = argparse.ArgumentParser(
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+        description="Segmentation - Create lables of segmented ventricles in cardiac MRI")
+    parser.add_argument("--input_dir", type=str, help="Input directory with nifti images to be curated")
+    parser.add_argument("--output_dir",type=str,help="Output directory with segmentations")
+    parser.add_argument("--log_file",type=str,help="txt file with log info",default="segmentation_log.txt")
+    parser.add_argument("--use_dicom",action='store_true',help="use dicom instead of nifti in classifier mode")
+    parser.set_defaults(use_dicom=False)
+    args = parser.parse_args()
+    
+    # Initialize logger
+    logger=initLogger("segmentation",args.log_file)
+
+    # check for empty input directory
+    if args.input_dir is None or args.output_dir is None:
+            logger.error("    Check that --input_dir and --output_dir are defined")
+            sys.exit()
+
+    # first, check if the input directory consists of single/multiple subjects
+    onesubject = single_subject(args.input_dir)
+    if onesubject:
+        # create a segmentation folder
+        foldername = '{}_segmentations'.format(os.path.basename(args.input_dir))
+        output_path = os.path.join(os.path.dirname(args.output_dir), foldername)
+        if not(os.path.exists(output_path)):
+            os.mkdir(os.path.join(output_path))
+
+        processSeries(args.input_dir, output_path, args.use_dicom)
+    else:
+        # make outer segmentation folder
+        save = os.path.join(args.output_dir, 'segmentations')
+        if not(os.path.exists(save)):
+                        os.mkdir(os.path.join(save))
+
+        for subject in os.listdir(args.input_dir):
+            foldername = '{}_segmentations'.format(os.path.basename(subject))
+            output_path = os.path.join(save, foldername)
+            if not(os.path.exists(output_path)):
+                os.mkdir(os.path.join(output_path))
+
+            processSeries(os.path.join(args.input_dir, subject), output_path, args.use_dicom)
+
+
