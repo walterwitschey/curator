@@ -45,7 +45,7 @@ python curator.py parse --input_dir /dcmdirectory/ --output_dir /outdcmdirectory
 
 python curator.py nifti --csv_file csv_file.csv --output_dir /outdcmdirectory/
 
-python curator.py classify --input_dir /dcmdirectory/ --output_dir /classified_directory/
+python curator.py classify --input_dir /dcmdirectory/ --output_dir /classified_directory/ --use_dicom
 
 python segmentation.py --input_dir /niidirectory/ --output_dir /classified_directory/
 

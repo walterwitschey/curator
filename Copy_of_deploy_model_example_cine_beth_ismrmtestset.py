@@ -10,6 +10,7 @@ import pandas as pd
 import PIL
 from PIL import ImageOps, Image
 import matplotlib.pyplot as plt
+import itk
 
 import sys
 import SimpleITK as sitk

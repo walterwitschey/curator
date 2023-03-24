@@ -25,6 +25,77 @@ orientation_names = ['2CH', '3CH', '4CH', 'SAX', 'LAX', 'APEX', 'MID', 'BASE', '
  'CANDYCANE', 'PAFLOW', 'VLA', 'WHOLE HEART', 'AO_AX', 'AXIAL', 'MPA', 'RPA', 'LPA', 'TRICUSPID', 'SAGITTAL',
   'CORONAL', 'AXIAL_MIP', 'SAGITTAL_MIP', 'CORONAL_MIP', 'RVOT', 'SVC', 'IVC', 'DAO', 'LPV', 'RPV', 'MITRAL', 'RV2CH', 'LV3CH', 'SAG_RVOT']
 
+contrast_dict = {
+    "CINE": 0,
+    "T1": 1,
+    "T1*": 2,
+    "T2": 3,
+    "T2*": 4,
+    "T1RHO": 5,
+    "TRUFI": 6,
+    "LGE": 7,
+    "PERF_AIF": 8,
+    "PSIR": 9,
+    "STIR": 10,
+    "MAG": 11,
+    "SCOUT": 12,
+    "TSE": 13,
+    "DE": 14,
+    "PSIR_MAG": 15,
+    "HASTE": 16,
+    "TWIST": 17,
+    "FL3D": 18,
+    "PSIR_PHASE": 19,
+    "PC_MAG": 20,
+    "PC_PHASE": 21,
+    "GRE": 22,
+    "T1_ERROR": 23,
+    "T1_MAP": 24,
+    "T1_IR": 25,
+    "T1RHO_MAP": 26,
+    "T1RHO_ERROR": 27,
+}
+
+orientation_dict = {
+    "2CH": 0,
+    "3CH": 1,
+    "4CH": 2,
+    "SAX": 3,
+    "LAX": 4,
+    "APEX": 5,
+    "MID": 6,
+    "BASE": 7,
+    "LVOT": 8,
+    "AOFLOW": 9,
+    "AV": 10,
+    "LOC": 11,
+    "CANDYCANE": 12,
+    "PAFLOW": 13,
+    "VLA": 14,
+    "WHOLE HEART": 15,
+    "AO_AX": 16,
+    "AXIAL": 17,
+    "MPA": 18,
+    "RPA": 19,
+    "LPA": 20,
+    "TRICUSPID": 21,
+    "SAGITTAL": 22,
+    "CORONAL": 23,
+    "AXIAL_MIP": 24,
+    "SAGITTAL_MIP": 25,
+    "CORONAL_MIP": 26,
+    "RVOT": 27,
+    "SVC": 28,
+    "IVC": 29,
+    "DAO": 30,
+    "LPV": 31,
+    "RPV": 32,
+    "MITRAL": 33,
+    "RV2CH": 34,
+    "LV3CH": 35,
+    "SAG_RVOT": 36
+}
+
 def int_code(x):
     return int(re.match('[0-9]+', os.path.basename(x)).group(0))
 
@@ -84,7 +155,7 @@ def classifySubject(input_dir, output_dir, use_dicom, sax_cine_only):
 
     # generate predictions
     logger.info('       generating predictions for %d images', img_array.shape[0])
-    orientation, contrast, cine_probability = generate_predictions(img_array)
+    orientation, contrast, cine_probability = generate_predictions(img_array, load_tokens_list(), seriesnames)
 
     # === debugging purposes only ===
     #save_images(img_array, os.path.join(os.path.dirname(os.path.realpath(__file__)), 'images'), orientation, contrast)
@@ -236,27 +307,39 @@ def preprocess_image(img, path):
         return
     
     img *= (255.0/(np.amax(img)))
-    png = im.fromarray(img).resize((150, 150))
+    png = im.fromarray(img).resize((256, 256))
     img = 255.0 - np.array(png)
     return img
 
-def generate_predictions(img_array):
+def generate_predictions(img_array, tokenlist, seriesnames):
     # preprocess image array
     img_array = img_array / 255.0
     img_array = np.expand_dims(img_array, axis=3)
 
-    # load models
-    orientation_model = tf.keras.models.load_model("orientation_model")
-    contrast_model = tf.keras.models.load_model("contrast_model")
-    predict_orientation = tf.keras.Sequential([orientation_model, tf.keras.layers.Softmax()])
-    predict_contrast = tf.keras.Sequential([contrast_model, tf.keras.layers.Softmax()])
+    # tokenize series names
+    encoded_docs = []
 
-    # generate predictions
-    orientations = np.argmax(predict_orientation.predict(img_array), axis=1)
-    contrasts = np.argmax(predict_contrast.predict(img_array), axis=1)
+    for ser in seriesnames:
+        important_dict = {key: 0 for key in tokenlist}
+        splitted = re.split(r'[-_ \n]', ser)
+
+        # iterate through tokenized list and update count
+        for tok in splitted:
+            if tok in important_dict:
+                important_dict[tok] = important_dict[tok] + 1
+        encoded_docs.append(np.fromiter(important_dict.values(), dtype=np.int32))
+    encoded_docs = np.asarray(encoded_docs)
+    
+    # orientation model
+    or_model = tf.keras.models.load_model("final_ori_model")
+    orientations = np.argmax(or_model.predict([img_array, encoded_docs]), axis=1)        
+    
+    # contrast model
+    con_model = tf.keras.models.load_model("final_con_model")
+    contrasts = np.argmax(con_model.predict([img_array, encoded_docs]), axis=1)        
 
     # cache and return probabilities for cine
-    cine_probability = [pred[0] for pred in contrast_model.predict(img_array)]
+    cine_probability = [pred[0] for pred in con_model.predict([img_array, encoded_docs])]
     
     # print results (debugging only)
     #for i in range(orientations.shape[0]):
@@ -291,7 +374,20 @@ def generate_sorted_folder(input_dir, output_dir, orientation, contrast, seriesn
             src = os.path.join(input_dir, name)
             dst = os.path.join(classfolder, name)
             shutil.copytree(src, dst)
-    
+
+def load_tokens_list():
+    tokens = []
+
+    # open file and read the content in a list
+    with open('tokens_list.txt', 'r') as fp:
+        for line in fp:
+            # remove linebreak from a current name
+            # linebreak is the last character of each line
+            x = line[:-1]
+
+            # add current item to the list
+            tokens.append(x)
+    return tokens
 
 # save mean slice images to local path (debugging purposes only)
 def save_images(image_array, file_path, orientation, contrast):
