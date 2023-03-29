@@ -155,6 +155,11 @@ def classifySubject(input_dir, output_dir, use_dicom, sax_cine_only):
 
     # generate predictions
     logger.info('       generating predictions for %d images', img_array.shape[0])
+    
+    # add an warning in case the image was not loaded properly
+    if img_array.shape[0] == 0:
+        logger.warning("    The classifier could not load any images. Make sure your input direcory path is correctly defined.")
+
     orientation, contrast, cine_probability = generate_predictions(img_array, load_tokens_list(), seriesnames)
 
     # === debugging purposes only ===
