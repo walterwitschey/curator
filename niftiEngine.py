@@ -22,7 +22,7 @@ class niftiEngine():
         logger.info("niftiEngine.init()")
         self.name = name
     
-    def writeCSVToNifti(self,csv_file,output_dir,include_tags_txt):
+    def writeCSVToNifti(self,csv_file,output_dir,include_tags_txt,use_patientname_as_foldername=False):
         logger.info("niftiEngine.convertCSVToNifti")
         df=pd.read_csv(csv_file)
         
@@ -43,6 +43,23 @@ class niftiEngine():
             #contrast = row["contrast"]
             #orientation = row["orientation"]
             nii_output_dir=os.path.join(output_dir,str(accessionNumber))
+            logger.info("Writing " + nii_output_dir)
+            self.process_dcm(dcmDirectory,nii_output_dir,include_tags)
+
+        for index, row in tqdm(df.iterrows()):
+            dcmDirectory = row["dcmDirectory"]
+            seriesNumber = row["seriesNumber"]
+            seriesDescription = row["seriesDescription"]
+            accessionNumber = row["accessionNumber"]
+            patientName = row["patientName"]
+            #contrast = row["contrast"]
+            #orientation = row["orientation"]
+
+            # checks for --use_patientname_as_foldername argument
+            if(use_patientname_as_foldername==True):
+                nii_output_dir=os.path.join(output_dir,patientName)
+            else:
+                nii_output_dir=os.path.join(output_dir,str(accessionNumber))
             logger.info("Writing " + nii_output_dir)
             self.process_dcm(dcmDirectory,nii_output_dir,include_tags)
     
@@ -134,4 +151,3 @@ class niftiEngine():
         if write_slice_jsons:
             with open(os.path.join(output_dir, slice_metadata_file), 'w') as f:
                 json.dump(slice_tag_dicts, f, indent=4)
-                

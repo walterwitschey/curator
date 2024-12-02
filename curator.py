@@ -1,4 +1,3 @@
-
 # system
 import argparse
 import os
@@ -8,6 +7,7 @@ import logging
 # custom modules
 import imageReaderWriter
 import niftiEngine
+import classifier
 
 def initLogger(name,logfile):
     # Create debugging information (logger)
@@ -31,17 +31,21 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
         description="Curator - Create databases of imaging data for manual curation")
-    parser.add_argument('curator_mode', choices=['parse', 'nifti', 'train','inference'])
+    parser.add_argument('curator_mode', choices=['parse', 'nifti', 'train','classify'])
     parser.add_argument("--input_dir", type=str, help="Input directory with dicom images to be curated")
     parser.add_argument("--output_dir",type=str,help="Output directory with curated files")
     parser.add_argument("--csv_file",type=str,help="csv file with data to curate")
     parser.add_argument("--use_patientname_as_foldername",action='store_true',help="use PatientName as folder name (default uses accession)")
     parser.add_argument("--use_cmr_info_as_filename",action='store_true',help="uses TriggerTime and SliceLocation in filename")
+    parser.add_argument("--use_dicom",action='store_true',help="use dicom instead of nifti in classifier mode")
+    parser.add_argument("--sax_cine_only",action='store_true',help="classifier will only copy and sort SAX CINE images")
     parser.add_argument("--log_file",type=str,help="txt file with log info",default="curator_log.txt")
     parser.add_argument("--include_tags_txt", type=str, default=default_include_tags_txt,
         help="List of tags to retain in metadata JSON")
     parser.set_defaults(use_patientname_as_foldername=False)
     parser.set_defaults(use_cmr_info_as_filename=False)
+    parser.set_defaults(use_dicom=False)
+    parser.set_defaults(sax_cine_only=False)
     args = parser.parse_args()
     
     # Initialize logger
@@ -85,5 +89,18 @@ if __name__ == "__main__":
         ne=niftiEngine.niftiEngine("NiftiEngine")
 
         # Given a csv file with 
-        ne.writeCSVToNifti(args.csv_file,args.output_dir,args.include_tags_txt)
+        ne.writeCSVToNifti(args.csv_file,args.output_dir,args.include_tags_txt,args.use_patientname_as_foldername)
+        sys.exit()
+
+    # Classify mode
+    # use pre-trained model to generate predictions about input image dataset
+    if(args.curator_mode=="classify"):
+        # A valid csv file has to be given as an input
+        logger.info("Classify Mode")
+        
+        if (args.input_dir is None or args.output_dir is None):
+            logger.error("    Check that --input_dir and --output_dir are defined")
+            sys.exit()
+        
+        classifier.classifyNifti(args.input_dir,args.output_dir,args.use_dicom, args.sax_cine_only)
         sys.exit()
